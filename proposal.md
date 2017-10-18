@@ -25,7 +25,7 @@ Ideally I would like to implement this as a one-page app, with each feature occu
 
 #### Greeting page (not logged in)
 
-[(View Image)](proposal-images/00WelcomePage.png)
+[(View Image)](https://raw.githubusercontent.com/k8thedinosaur/capstone/master/proposal-images/00WelcomePage.png)
 
 Shows closed fridge and login box on front, empty notice board and empty shopping bag to right side.
 
@@ -36,7 +36,7 @@ Left sidebar has intro text stating purpose/functionality, how to use, tips.
 
 #### Main Page (logged in)
 
-[(View Image)](proposal-images/00LoggedIn.png)
+[(View Image)](https://raw.githubusercontent.com/k8thedinosaur/capstone/master/proposal-images/00LoggedIn.png)
 
 Upon successful login, animation of fridge door swinging open reveals shelves with icons of different categories of food items **(1)**.
 
