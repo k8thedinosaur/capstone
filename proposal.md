@@ -25,6 +25,8 @@ Ideally I would like to implement this as a one-page app, with each feature occu
 
 #### Greeting page (not logged in)
 
+[(View Image)](proposalimages/00WelcomePage.png)
+
 Shows closed fridge and login box on front, empty notice board and empty shopping bag to right side.
 
 (MVP: Login will allow user to access fridge just by typing their name -- no security; local copy only.
@@ -33,6 +35,8 @@ Proper launch may integrate password-protected and stored/outside-accessible acc
 Left sidebar has intro text stating purpose/functionality, how to use, tips.
 
 #### Main Page (logged in)
+
+[(View Image)](proposalimages/00LoggedIn.png)
 
 Upon successful login, animation of fridge door swinging open reveals shelves with icons of different categories of food items **(1)**.
 
@@ -43,6 +47,8 @@ Below is a grocery bag icon which can be clicked to add new items to fridge **(5
 To the side of the fridge door is an icon to close fridge (equivalent to logging out and saving).
 
 **(1) Fridge View**
+
+[(View Image)](proposalimages/01ItemView.png)
 
 User can click category icons in fridge to activate a pop-up/overlay window displaying which sub-items they have in each (i.e. Dairy >> Cheese). (Apart from the list of provided categories, there will also be an "unknown/other" category at the end, so the user isn't limited and can have pretty much any item conceivable in their fridge.)
 
@@ -57,6 +63,8 @@ Clicking an item pops out a side menu with details of individual items: Purchase
 Click the X in the top menu bar to close and return to main fridge view.
 
 **(2) Shopping List**
+
+[(View Image)](proposalimages/02ShoppingList.png)
 
 When shopping list is clicked on the notice board, it pops up and displays a list of the main fridge categories, with blank lines in between for adding items. (Categories are listed in order even if empty, to make it easy to compare with fridge list(4).)
 
@@ -74,15 +82,21 @@ Click the X in the top menu bar to save/close and return to main fridge view.
 
 **(3) Tossed Items**
 
+[(View Image)](proposalimages/03TossedList.png)
+
 Clicking tossed items pops up an overlay displaying all items tossed within the last month and the date they were tossed, allowing user to track what they're buying too much of/not using. This item also tracks system time, and items older than one month fall off automatically.
 
 Click the X in the top menu bar to close and return to main fridge view.
 
 **(4) Fridge List**
 
+[(View Image)](proposalimages/04FridgeList.png)
+
 Clicking the arrow on the right side of the screen will expand a sidebar which contains all the items currently in the fridge in condensed list form without details (i.e. only category, name, quantity: meat >> pork chops >> 2). This is meant to be used side-by-side with the shopping list to make sure no duplicate/unnecessary items are being added to the shopping list.
 
 **(5) Add Items**
+
+[(View Image)](proposalimages/05AddItem.png)
 
 The grocery bag icon can be clicked to bring up the "add items" overlay. This brings up a list of the main fridge categories. Clicking one of those pops out an input form with fields for item name, quantity, date purchased, expiration date, calories, recipes.
 
