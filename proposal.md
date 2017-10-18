@@ -48,7 +48,7 @@ To the side of the fridge door is an icon to close fridge (equivalent to logging
 
 **(1) Fridge View**
 
-[(View Image)](proposal-images/01ItemView.png)
+[(View Image)](proposal-images/01ItemDetail.png)
 
 User can click category icons in fridge to activate a pop-up/overlay window displaying which sub-items they have in each (i.e. Dairy >> Cheese). (Apart from the list of provided categories, there will also be an "unknown/other" category at the end, so the user isn't limited and can have pretty much any item conceivable in their fridge.)
 
