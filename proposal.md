@@ -1,4 +1,4 @@
-### *Name
+### Name
 
 **Possible names:**
 
@@ -10,7 +10,7 @@ Fridge Friend / Fridge Buddy / Fridge Saver (with superhero cape)
 
 ---
 
-### *Product Overview
+### Product Overview
 
 *What is your MVP web app going to do?
 How does a user interact with it on a high level?*
@@ -19,7 +19,7 @@ The app will allow users to add all the groceries they buy to a "digital fridge"
 
 ---
 
-### *Specific Functionality
+### Specific Functionality
 
 Ideally I would like to implement this as a one-page app, with each feature occurring in a pop-up/overlay box on top which carries out its functionality and saves data, then can be closed to return to the "original" screen. The page should not need to be refreshed (other than first logging in/opening fridge).
 
@@ -113,7 +113,7 @@ All fields are user-editable and not all need to be filled in. (But, of course, 
 
 ---
 
-### *Data Model
+### Data Model
 
 *What are the persistent "nouns" you need to save across pages in your project MVP?
 What do they represent?*
@@ -128,7 +128,7 @@ These could all be implemented as python classes and the specific info put into 
 
 ---
 
-### *Technical Components
+### Technical Components
 
 *What are the "moving parts" of your MVP?
 What are the things like "modules" you're going to write?
@@ -150,7 +150,7 @@ Sidebar list view of fridge (4). (Same content as (0).)
 
 ---
 
-### *Schedule
+### Schedule
 
 *Write out the order in which you will tackle your technical components of your MVP.*
 
@@ -184,7 +184,7 @@ Creating cute CSS/vector pictures for my food icons.
 
 ---
 
-### *Further Work
+### Further Work
 
 *Here you should outline other features you'd like to implement if you get "done" early.
 Order them by importance towards your high-level goal and what order you'll work on them later.*
