@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOMETHING (or not)</title>
+</head>
+<body>
+thingsome <br>
+{% for i in contents %}
+    {{ i.name }} - {{ i.category }}: {{ i.intended_use }}<br>
+{% endfor %}
+<p>
+    {% for u in unknown %}
+    {{ u.name }}<br>
+    {% endfor %}
+</p>
+</body>
+</html>

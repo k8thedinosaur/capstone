@@ -1,4 +1,4 @@
-### *Name
+### Name
 
 **Possible names:**
 
@@ -10,7 +10,7 @@ Fridge Friend / Fridge Buddy / Fridge Saver (with superhero cape)
 
 ---
 
-### *Product Overview
+### Product Overview
 
 *What is your MVP web app going to do?
 How does a user interact with it on a high level?*
@@ -19,13 +19,13 @@ The app will allow users to add all the groceries they buy to a "digital fridge"
 
 ---
 
-### *Specific Functionality
+### Specific Functionality
 
 Ideally I would like to implement this as a one-page app, with each feature occurring in a pop-up/overlay box on top which carries out its functionality and saves data, then can be closed to return to the "original" screen. The page should not need to be refreshed (other than first logging in/opening fridge).
 
 #### Greeting page (not logged in)
 
-[(View Image)](proposalimages/00WelcomePage.png)
+[(View Image)](https://raw.githubusercontent.com/k8thedinosaur/capstone/master/proposal-images/00WelcomePage.png)
 
 Shows closed fridge and login box on front, empty notice board and empty shopping bag to right side.
 
@@ -36,7 +36,7 @@ Left sidebar has intro text stating purpose/functionality, how to use, tips.
 
 #### Main Page (logged in)
 
-[(View Image)](proposalimages/00LoggedIn.png)
+[(View Image)](https://raw.githubusercontent.com/k8thedinosaur/capstone/master/proposal-images/00LoggedIn.png)
 
 Upon successful login, animation of fridge door swinging open reveals shelves with icons of different categories of food items **(1)**.
 
@@ -48,7 +48,7 @@ To the side of the fridge door is an icon to close fridge (equivalent to logging
 
 **(1) Fridge View**
 
-[(View Image)](proposalimages/01ItemView.png)
+[(View Image)](https://raw.githubusercontent.com/k8thedinosaur/capstone/master/proposal-images/01ItemDetail.png)
 
 User can click category icons in fridge to activate a pop-up/overlay window displaying which sub-items they have in each (i.e. Dairy >> Cheese). (Apart from the list of provided categories, there will also be an "unknown/other" category at the end, so the user isn't limited and can have pretty much any item conceivable in their fridge.)
 
@@ -64,7 +64,7 @@ Click the X in the top menu bar to close and return to main fridge view.
 
 **(2) Shopping List**
 
-[(View Image)](proposalimages/02ShoppingList.png)
+[(View Image)](https://raw.githubusercontent.com/k8thedinosaur/capstone/master/proposal-images/02ShoppingList.png)
 
 When shopping list is clicked on the notice board, it pops up and displays a list of the main fridge categories, with blank lines in between for adding items. (Categories are listed in order even if empty, to make it easy to compare with fridge list(4).)
 
@@ -82,7 +82,7 @@ Click the X in the top menu bar to save/close and return to main fridge view.
 
 **(3) Tossed Items**
 
-[(View Image)](proposalimages/03TossedList.png)
+[(View Image)](https://raw.githubusercontent.com/k8thedinosaur/capstone/master/proposal-images/03TossedList.png)
 
 Clicking tossed items pops up an overlay displaying all items tossed within the last month and the date they were tossed, allowing user to track what they're buying too much of/not using. This item also tracks system time, and items older than one month fall off automatically.
 
@@ -90,13 +90,13 @@ Click the X in the top menu bar to close and return to main fridge view.
 
 **(4) Fridge List**
 
-[(View Image)](proposalimages/04FridgeList.png)
+[(View Image)](https://raw.githubusercontent.com/k8thedinosaur/capstone/master/proposal-images/04FridgeList.png)
 
 Clicking the arrow on the right side of the screen will expand a sidebar which contains all the items currently in the fridge in condensed list form without details (i.e. only category, name, quantity: meat >> pork chops >> 2). This is meant to be used side-by-side with the shopping list to make sure no duplicate/unnecessary items are being added to the shopping list.
 
 **(5) Add Items**
 
-[(View Image)](proposalimages/05AddItem.png)
+[(View Image)](https://raw.githubusercontent.com/k8thedinosaur/capstone/master/proposal-images/05AddItem.png)
 
 The grocery bag icon can be clicked to bring up the "add items" overlay. This brings up a list of the main fridge categories. Clicking one of those pops out an input form with fields for item name, quantity, date purchased, expiration date, calories, recipes.
 
@@ -113,7 +113,7 @@ All fields are user-editable and not all need to be filled in. (But, of course, 
 
 ---
 
-### *Data Model
+### Data Model
 
 *What are the persistent "nouns" you need to save across pages in your project MVP?
 What do they represent?*
@@ -128,7 +128,7 @@ These could all be implemented as python classes and the specific info put into 
 
 ---
 
-### *Technical Components
+### Technical Components
 
 *What are the "moving parts" of your MVP?
 What are the things like "modules" you're going to write?
@@ -150,7 +150,7 @@ Sidebar list view of fridge (4). (Same content as (0).)
 
 ---
 
-### *Schedule
+### Schedule
 
 *Write out the order in which you will tackle your technical components of your MVP.*
 
@@ -184,7 +184,7 @@ Creating cute CSS/vector pictures for my food icons.
 
 ---
 
-### *Further Work
+### Further Work
 
 *Here you should outline other features you'd like to implement if you get "done" early.
 Order them by importance towards your high-level goal and what order you'll work on them later.*
