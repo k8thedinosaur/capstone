@@ -10,20 +10,42 @@ class Fridge(models.Model):
 
 class Item(models.Model):
     fridge = models.ForeignKey('Fridge', related_name='fridge', default=1)
-    Fruit = 'Fruit'
-    Veg = 'Veg'
-    Meat = 'Meat'
-    Unknown = 'Unknown'
+    meat = 'Meat'
+    seafood = 'Seafood'
+    dairy = 'Dairy'
+    veg = 'Veg'
+    fruit = 'Fruit'
+    leftovers = 'Leftovers'
+    alcohol = 'Alcohol'
+    nonedible = 'Non-Edible'
+    other = 'Other'
+    condiments = 'Condiments'
+    sauces = 'Sauces'
+    beverages = 'Beverages'
+    frozen = 'Frozen'
+    heatneat = 'Heat-n-Eat'
+    desserts = 'Desserts'
     CATEGORY_CHOICES = (
-        (Fruit, 'Fruit'),
-        (Veg, 'Veg'),
-        (Meat, 'Meat'),
-        (Unknown, 'Unknown'),
+        (meat, 'Meat'),
+        (seafood, 'Seafood'),
+        (dairy, 'Dairy'),
+        (veg, 'Veg'),
+        (fruit, 'Fruit'),
+        (leftovers, 'Leftovers'),
+        (alcohol, 'Alcohol'),
+        (nonedible, 'Non-Edible'),
+        (other, 'Other'),
+        (condiments, 'Condiments'),
+        (sauces, 'Sauces'),
+        (beverages, 'Beverages'),
+        (frozen, 'Frozen'),
+        (heatneat, 'Heat-n-Eat'),
+        (desserts, 'Desserts'),
     )
     category = models.CharField(
         max_length=20,
         choices=CATEGORY_CHOICES,
-        default='Unknown',
+        default='Other',
     )
     name = models.CharField(max_length=100)
     quantity = models.IntegerField(default=1, verbose_name='Quantity/Servings')

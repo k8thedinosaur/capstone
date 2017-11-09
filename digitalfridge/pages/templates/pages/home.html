@@ -1,18 +1,324 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>SOMETHING (or not)</title>
+    <link rel="stylesheet" href="{% static 'pages/css/styles.css' %}">
 </head>
+{#<body>#}
+{#thingsome <br>#}
+{##}
+{#<h3>All Items</h3>#}
+{#{% for i in contents %}#}
+{#    {{ i.name }}: {{ i.intended_use }}<br>#}
+{#{% endfor %}#}
+{#<p>#}
+{#<h3>Category: Unknown</h3>#}
+{#{% for u in unknown %}#}
+{#{{ u.name }}<br>#}
+{#{% endfor %}#}
+{#</body>#}
+
 <body>
-thingsome <br>
-{% for i in contents %}
-    {{ i.name }} - {{ i.category }}: {{ i.intended_use }}<br>
-{% endfor %}
-<p>
-    {% for u in unknown %}
-    {{ u.name }}<br>
-    {% endfor %}
-</p>
+  <div id="page-wrapper">
+
+    <div id="border">
+
+      <div id="wall">
+        <div id="floor"></div>
+      </div>
+
+      <div id="fridge-box">
+
+
+        <div id="freezer">
+          <div class="container freezer-container">
+    <div class="row row-freezer">
+
+      <!-- frozen -->
+      <div class="box frozen-box">
+        <div class="pic frozen-pic">
+            <div class="frozen-bag-body">
+            <div class="frozen-bag-top">
+              <div class="frozen-bag-zipper"></div>
+            </div>
+            <div class="chicken-leg">
+              <div class="bone"></div>
+              <div class="bone-end1"></div>
+              <div class="bone-end2"></div>
+              <div class="chicken"></div>
+            </div>
+          </div>
+
+
+
+
+          <div class="frozen-little-face">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="happy-mouth"></div>
+            <!--         <div class="sad-mouth"></div> -->
+          </div>
+        </div>
+        <div class="labels frozen-label">frozen</div>
+      </div>
+
+      <!-- heat-n-eat -->
+      <div class="box heatneat-box">
+        <div class="pic heatneat-pic">
+          <div class="heatneat-box-top"></div>
+          <div class="heatneat-box-side"></div>
+          <div class="heatneat-box-face">
+            <div class="heatneat-text">foodlike</div>
+            <div class="heatneat-tray-bottom"></div>
+            <div class="heatneat-tray-top"></div>
+            <div class="foodlump1"></div>
+            <div class="foodlump2"></div>
+            <div class="meatlump-shadow"></div>
+            <div class="meatlump-body"></div>
+            <div class="meatlump-highlight"></div>
+          </div>
+          <div class="heatneat-little-face">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="happy-mouth"></div>
+            <!--         <div class="sad-mouth"></div> -->
+          </div>
+        </div>
+        <div class="labels heatneat-label">heat-n-eat</div>
+      </div>
+
+      <!-- desserts -->
+      <div class="box desserts-box">
+        <div class="pic desserts-pic">
+<div class="cone-bottom"></div>
+          <div class="cone-body"></div>
+          <div class="cone-top-edge"></div>
+          <div class="cone-rim"></div>
+          <div class="ice-cream-bottom"></div>
+          <div class="ice-cream-top"></div>
+
+
+
+          <div class="desserts-little-face">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="happy-mouth"></div>
+            <!--         <div class="sad-mouth"></div> -->
+          </div>
+        </div>
+        <div class="labels desserts-label">desserts</div>
+      </div>
+
+
+<!--       end row-freezer -->
+    </div>
+<!--     end container-freezer -->
+  </div>
+
+        </div>
+
+
+        <div id="fridger"><div class="container fridge-container">
+
+    <div class="row row-one">
+  <!-- meat -->
+      <div class="box meat-box">
+        <div class="pic meat-pic">
+  <!--       content -->
+        </div>
+        <div class="labels meat-label">meat</div>
+      </div>
+
+  <!-- seafood -->
+      <div class="box seafood-box">
+        <div class="pic seafood-pic">
+  <!--       content -->
+        </div>
+        <div class="labels seafood-label">seafood</div>
+      </div>
+
+  <!-- dairy -->
+      <div class="box dairy-box">
+        <div class="pic dairy-pic">
+  <div class="cheese-side"></div>
+          <div class="cheese-top"></div>
+          <div class="cheese-back"></div>
+          <div class="dairy-little-face">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="happy-mouth"></div>
+            <!--         <div class="sad-mouth"></div> -->
+           </div>
+        </div>
+        <div class="labels dairy-label">dairy</div>
+      </div>
+
+<!--       end row-one -->
+    </div>
+
+    <p>
+
+    <div class="row row-two">
+
+    <!-- veg -->
+      <div class="box veg-box">
+        <div class="pic veg-pic">
+          <div class="broc-left-leg"></div>
+          <div class="broc-middle-leg"></div>
+          <div class="broc-right-leg"></div>
+          <div class="broc-puff-back"></div>
+          <div class="broc-puff-left"></div>
+          <div class="broc-puff-right"></div>
+          <div class="broc-puff-front-left"></div>
+          <div class="broc-puff-front-right"></div>
+          <div class="broc-little-face">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="happy-mouth"></div>
+            <!--         <div class="sad-mouth"></div> -->
+          </div>
+        </div>
+        <div class="labels veg-label">veg</div>
+      </div>
+
+      <!-- fruit -->
+      <div class="box fruit-box">
+        <div class="pic fruit-pic">
+          <!--       content -->
+        </div>
+        <div class="labels fruit-label">fruit</div>
+      </div>
+
+      <!-- fruit -->
+      <div class="box leftovers-box">
+        <div class="pic leftovers-pic">
+          <!--       content -->
+        </div>
+        <div class="labels leftovers-label">leftovers</div>
+      </div>
+
+    <!--     end row-two -->
+    </div>
+
+    <p>
+
+    <div class="row row-three">
+
+      <!-- alcohol -->
+      <div class="box alcohol-box">
+        <div class="pic alcohol-pic">
+          <div class="bottle-cork"></div>
+          <div class="bottle-top"></div>
+          <div class="bottle-curve"></div>
+          <div class="bottle-body">
+            <div class="wine-top"></div>
+            <div class="wine-body"></div>
+            <div class="bottle-label-shadow">
+              <div class="bottle-label"></div>
+            </div>
+          </div>
+          <div class="bottle-bottom">
+            <div class="wine-bottom"></div>
+          </div>
+
+
+          <div class="alcohol-little-face">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="happy-mouth"></div>
+            <!--         <div class="sad-mouth"></div> -->
+          </div>
+        </div>
+        <div class="labels alcohol-label">alcohol</div>
+      </div>
+
+      <!-- non-edible -->
+      <div class="box nonedible-box">
+        <div class="pic nonedible-pic">
+          <!--       content -->
+        </div>
+        <div class="labels nonedible-label">non-edible</div>
+      </div>
+
+      <!-- other -->
+      <div class="box other-box">
+        <div class="pic other-pic">
+          <!--       content -->
+        </div>
+        <div class="labels other-label">other</div>
+      </div>
+<!--       end row-three -->
+    </div>
+<!--       end fridge-containter -->
+  </div></div>
+
+
+        <div id="fridge-back"></div>
+        <div id="fridger-door">
+          <div class="door-container">
+    <div class="row door-row-one">
+      <!-- condiments -->
+      <div class="box condiments-box">
+        <div class="pic condiments-pic">
+          <!--       content -->
+        </div>
+        <div class="labels condiments-label">condiments</div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="row door-row-two">
+        <!-- sauces -->
+      <div class="box sauces-box">
+        <div class="pic sauces-pic">
+          <!--       content -->
+        </div>
+        <div class="labels sauces-label">sauces</div>
+      </div>
+
+    </div>
+
+    <br><br>
+
+    <div class="row door-row-three">
+      <!-- other -->
+      <div class="box beverages-box">
+        <div class="pic beverages-pic">
+          <!--       content -->
+        </div>
+        <div class="labels beverages-label">beverages</div>
+      </div>
+<!--      end door row three -->
+      </div>
+<!--     end door container -->
+  </div>
+        </div>
+          <div id="fridger-handle-inner"></div>
+          <div id="fridger-handle-outer"></div>
+        <div id="freezer-door"></div>
+          <div id="freezer-handle-inner"></div>
+          <div id="freezer-handle-outer"></div>
+        <div id="fridger-hinge"></div>
+        <div id="freezer-hinge"></div>
+      </div>
+
+        <div id="shoppingList">
+            <div id="myDIV" class="header">
+              <h2 style="margin:5px">Shopping List</h2>
+              <input type="text" id="myInput" placeholder="Item..."><span onclick="newElement()" class="addBtn">Add</span>
+            </div>
+
+            <ul id="myUL">
+
+            </ul>
+        </div>
+
+    </div>
+  </div>
+<script src="{% static 'pages/js/main.js' %}"></script>
 </body>
 </html>
