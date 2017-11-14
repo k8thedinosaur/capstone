@@ -31,16 +31,16 @@
         <div id="floor"></div>
       </div>
 
-                <div id="shopping-list">
-                    <div id="myDIV" class="header">
-                      <h2 style="margin:5px">Shopping List</h2>
-                      <input type="text" id="myInput" placeholder="Item..."><span onclick="newElement()" class="addBtn">Add</span>
-                    </div>
-
-                    <ul id="myUL">
-
-                    </ul>
-                </div>
+{#                <div id="shopping-list">#}
+{#                    <div id="myDIV" class="header">#}
+{#                      <h2 style="margin:5px">Shopping List</h2>#}
+{#                      <input type="text" id="myInput" placeholder="Item..."><span onclick="newElement()" class="addBtn">Add</span>#}
+{#                    </div>#}
+{##}
+{#                    <ul id="myUL">#}
+{##}
+{#                    </ul>#}
+{#                </div>#}
         <div id="fridge-box">
 
           <div id="freezer">
@@ -343,6 +343,72 @@
           <div id="freezer-hinge"></div>
           </div>
 
+<!--       notice board -->
+
+        <div id="notice-board">
+          <div id="board-border">
+            <div id="board-content">
+
+              <div class="fridge-list" id="fridgeListBtn">
+                <div id="fridge-list-label" class="fridge-list list-label">
+                  <div class="label-text">fridge</div>
+                  <div class="label-text">list</div>
+                </div>
+                <div id="fridge-list-body" class="fridge-list">
+                  <div class="list-pic">
+                    <div class="list-pic-text">
+                      * ...<br>
+                      * ...<br>
+                      * ...<br>
+                      * ...<br>
+                      * ...
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tossed-list" id="tossedListBtn">
+                <div id="tossed-list-label" class="tossed-list list-label">
+                  <div class="label-text">tossed</div>
+                  <div class="label-text">list</div>
+                </div>
+                <div id="tossed-list-body" class="tossed-list">
+                  <div class="list-pic">
+                    <div class="list-pic-text">
+                      * ...<br>
+                      * ...<br>
+                      * ...<br>
+                      * ...<br>
+                      * ...
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="shopping-list" id="shoppingListBtn">
+                <div id="shopping-list-label" class="shopping-list list-label">
+                  <div class="label-text">shopping</div>
+                  <div class="label-text">list</div>
+                </div>
+                <div id="shopping-list-body" class="shopping-list">
+                  <div class="list-pic">
+                    <div class="list-pic-text">
+                      * ...<br>
+                      * ...<br>
+                      * ...<br>
+                      * ...<br>
+                      * ...
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+  <!-- end notice board -->
 
 
         <div id="frozenModal" class="modal">
@@ -526,6 +592,26 @@
                    {% endfor %}
             </div>
         </div>
+
+        <div id="fridgeListModal" class="fridge-list-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                fridge
+            </div>
+        </div>
+        <div id="tossedListModal" class="tossed-list-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                tossed
+            </div>
+        </div>
+        <div id="shoppingListModal" class="shopping-list-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                shopping
+            </div>
+        </div>
+
     </div>
   </div>
 

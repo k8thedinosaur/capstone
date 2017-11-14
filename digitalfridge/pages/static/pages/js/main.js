@@ -1,60 +1,3 @@
-// // Create a "close" button and append it to each list item
-// var myNodelist = document.getElementsByTagName("LI");
-// var i;
-// for (i = 0; i < myNodelist.length; i++) {
-//   var span = document.createElement("SPAN");
-//   var txt = document.createTextNode("\u00D7");
-//   span.className = "close";
-//   span.appendChild(txt);
-//   myNodelist[i].appendChild(span);
-// }
-//
-// // Click on a close button to hide the current list item
-// var close = document.getElementsByClassName("close");
-// var i;
-// for (i = 0; i < close.length; i++) {
-//   close[i].onclick = function() {
-//     var div = this.parentElement;
-//     div.style.display = "none";
-//   }
-// }
-//
-// // Add a "checked" symbol when clicking on a list item
-// var list = document.querySelector('ul');
-// list.addEventListener('click', function(ev) {
-//   if (ev.target.tagName === 'LI') {
-//     ev.target.classList.toggle('checked');
-//   }
-// }, false);
-//
-// // Create a new list item when clicking on the "Add" button
-// function newElement() {
-//   var li = document.createElement("li");
-//   var inputValue = document.getElementById("myInput").value;
-//   var t = document.createTextNode(inputValue);
-//   li.appendChild(t);
-//   if (inputValue === '') {
-//     alert("Did you forget to type your item?");
-//   } else {
-//     document.getElementById("myUL").appendChild(li);
-//   }
-//   document.getElementById("myInput").value = "";
-//
-//   var span = document.createElement("SPAN");
-//   var txt = document.createTextNode("\u00D7");
-//   span.className = "close";
-//   span.appendChild(txt);
-//   li.appendChild(span);
-//
-//   for (i = 0; i < close.length; i++) {
-//     close[i].onclick = function() {
-//       var div = this.parentElement;
-//       div.style.display = "none";
-//     }
-//   }
-// }
-
-
 // Get the modal
 var frozen_modal = document.getElementById('frozenModal');
 var heatneat_modal = document.getElementById('heatneatModal');
@@ -71,6 +14,11 @@ var other_modal = document.getElementById('otherModal');
 var condiments_modal = document.getElementById('condimentsModal');
 var sauces_modal = document.getElementById('saucesModal');
 var beverages_modal = document.getElementById('beveragesModal');
+
+var fridge_list_modal = document.getElementById('fridgeListModal');
+var tossed_list_modal = document.getElementById('tossedListModal');
+var shopping_list_modal = document.getElementById('shoppingListModal');
+
 
 
 // Get the button that opens the modal
@@ -90,6 +38,12 @@ var condiments_btn = document.getElementById("condimentsBtn");
 var sauces_btn = document.getElementById("saucesBtn");
 var beverages_btn = document.getElementById("beveragesBtn");
 
+var fridge_list_btn = document.getElementById('fridgeListBtn');
+var tossed_list_btn = document.getElementById('tossedListBtn');
+var shopping_list_btn = document.getElementById('shoppingListBtn');
+
+
+
 // Get the <span> element that closes the modal
 var frozen_span = document.getElementsByClassName("close")[0];
 var heatneat_span = document.getElementsByClassName("close")[1];
@@ -106,6 +60,12 @@ var other_span = document.getElementsByClassName("close")[11];
 var condiments_span = document.getElementsByClassName("close")[12];
 var sauces_span = document.getElementsByClassName("close")[13];
 var beverages_span = document.getElementsByClassName("close")[14];
+
+var fridge_list_span = document.getElementsByClassName("close")[15];
+var tossed_list_span = document.getElementsByClassName("close")[16];
+var shopping_list_span = document.getElementsByClassName("close")[17];
+
+
 
 // When the user clicks on the button, open the modal
 frozen_btn.onclick = function() {
@@ -154,6 +114,19 @@ beverages_btn.onclick = function() {
     beverages_modal.style.display = "block";
 };
 
+
+fridge_list_btn.onclick = function() {
+    fridge_list_modal.style.display = "block";
+};
+tossed_list_btn.onclick = function() {
+    tossed_list_modal.style.display = "block";
+};
+shopping_list_btn.onclick = function() {
+    shopping_list_modal.style.display = "block";
+};
+
+
+
 // When the user clicks on <span> (x), close the modal
 frozen_span.onclick = function() {
     frozen_modal.style.display = "none";
@@ -199,4 +172,14 @@ sauces_span.onclick = function() {
 };
 beverages_span.onclick = function() {
     beverages_modal.style.display = "none";
+};
+
+fridge_list_span.onclick = function() {
+    fridge_list_modal.style.display = "none";
+};
+tossed_list_span.onclick = function() {
+    tossed_list_modal.style.display = "none";
+};
+shopping_list_span.onclick = function() {
+    shopping_list_modal.style.display = "none";
 };
