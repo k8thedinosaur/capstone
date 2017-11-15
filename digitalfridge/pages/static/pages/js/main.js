@@ -19,6 +19,8 @@ var fridge_list_modal = document.getElementById('fridgeListModal');
 var tossed_list_modal = document.getElementById('tossedListModal');
 var shopping_list_modal = document.getElementById('shoppingListModal');
 
+var add_item_modal = document.getElementById('addItemModal');
+
 
 
 // Get the button that opens the modal
@@ -41,6 +43,8 @@ var beverages_btn = document.getElementById("beveragesBtn");
 var fridge_list_btn = document.getElementById('fridgeListBtn');
 var tossed_list_btn = document.getElementById('tossedListBtn');
 var shopping_list_btn = document.getElementById('shoppingListBtn');
+
+var add_item_btn = document.getElementById('addItemBtn');
 
 
 
@@ -65,6 +69,7 @@ var fridge_list_span = document.getElementsByClassName("close")[15];
 var tossed_list_span = document.getElementsByClassName("close")[16];
 var shopping_list_span = document.getElementsByClassName("close")[17];
 
+var add_item_span = document.getElementsByClassName("close")[18];
 
 
 // When the user clicks on the button, open the modal
@@ -125,6 +130,10 @@ shopping_list_btn.onclick = function() {
     shopping_list_modal.style.display = "block";
 };
 
+add_item_btn.onclick = function () {
+    add_item_modal.style.display = "block";
+};
+
 
 
 // When the user clicks on <span> (x), close the modal
@@ -182,4 +191,8 @@ tossed_list_span.onclick = function() {
 };
 shopping_list_span.onclick = function() {
     shopping_list_modal.style.display = "none";
+};
+
+add_item_span.onclick = function () {
+    add_item_modal.style.display = "none";
 };

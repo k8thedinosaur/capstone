@@ -180,6 +180,130 @@ background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox=
   left: 45%;
 }
 
+.freezer-inside-back {
+  position: absolute;
+  background: #ddd;
+  border-radius:1%;
+  height: 90%;
+  width: 79%;
+  left: 10.5%;
+  top: -18%;
+  z-index: -3;
+}
+
+.freezer-inside-left {
+  position: absolute;
+  background: #eaeaea;
+  border-radius:2%;
+  height: 105%;
+  width: 10%;
+  top: -18%;
+  left: 1%;
+  z-index: -3;
+}
+
+.freezer-inside-right {
+  position: absolute;
+  background: #eaeaea;
+  border-radius:2%;
+  height: 105%;
+  width: 10%;
+  top: -18%;
+  left: 89%;
+  z-index: -3;
+}
+
+.freezer-shelf {
+  position: absolute;
+    -webkit-clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  background: #eee;
+  z-index: -2;
+  height: 30%;
+  width: 98%;
+  top: 57%;
+}
+.row-one-shelf {
+  position: absolute;
+  -webkit-clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+  background: #eee;
+  z-index: -2;
+  height: 12%;
+  width: 94%;
+  top: 15.2%;
+}
+
+.row-two-shelf {
+  position: absolute;
+  -webkit-clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+  background: #eee;
+  z-index: -2;
+  height: 12%;
+  width: 94%;
+  top: 49.5%;
+}
+
+.row-three-shelf {
+  position: absolute;
+  -webkit-clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  background: #eee;
+  z-index: -2;
+  height: 12%;
+  width: 98%;
+  top: 83.5%;
+}
+
+.shelf-edge-one {
+  position: absolute;
+  background: #f4f5f7;
+  height: 5%;
+  width: 94%;
+  top: 27%;
+  z-index: -2
+}
+
+.shelf-edge-two {
+  position: absolute;
+  background: #f4f5f7;
+  height: 5%;
+  width: 94%;
+  top: 61%;
+  z-index: -2
+}
+
+.inside-fridge-back {
+  position: absolute;
+  background: #ddd;
+  border-radius:1%;
+  height: 90%;
+  width: 79%;
+  left: 10.5%;
+  z-index: -3;
+}
+
+.inside-fridge-left {
+  position: absolute;
+  background: #eaeaea;
+  border-radius:2%;
+  height: 95.5%;
+  width: 10%;
+  left: 1%;
+  z-index: -3;
+}
+
+.inside-fridge-right {
+  position: absolute;
+  background: #eaeaea;
+  border-radius:2%;
+  height: 95.5%;
+  width: 10%;
+  left: 89%;
+  z-index: -3;
+}
+
 
 
 /* fridge contents */
@@ -206,7 +330,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox=
 .pic {
     height: 125px;
     width: 125px;
-    border: solid 2px #ccc;
+    /*border: solid 2px #ccc;*/
     border-radius: 5px;
 }
 
@@ -245,7 +369,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox=
 
 .left-eye {
     position: absolute;
-    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
     background: #000;
     height: 20%;
     width: 20%;
@@ -255,7 +379,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox=
 
 .right-eye {
     position: absolute;
-    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
     background: #000;
     height: 20%;
     width: 20%;
@@ -623,7 +747,7 @@ clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
     height: 20%;
     width: 20%;
     top: 58%;
-    left: 60%;
+    left: 59.5%;
     z-index: 5;
 }
 
@@ -633,9 +757,9 @@ clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
     -webkit-clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
     clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
     height: 50%;
-    width: 62%;
-    top: 35%;
-    left: 22%;
+    width: 59.5%;
+    top: 37.75%;
+    left: 23.75%;
 }
 
 .cheese-top {
@@ -645,9 +769,9 @@ clip-path: polygon(30% 0, 0 100%, 100% 50%);
     transform: rotate(23deg);
     background: #ffd621;
     height: 20%;
-    width: 62%;
-    top: 27%;
-    left: 25%;
+    width: 61%;
+    top: 31%;
+    left: 25.25%;
 }
 
 .cheese-back {
@@ -655,11 +779,11 @@ clip-path: polygon(30% 0, 0 100%, 100% 50%);
     -webkit-clip-path: ellipse(10% 50% at 46% 50%);
     clip-path: ellipse(10% 50% at 46% 50%);
     background: #ffd621;
-    height: 26.5%;
-    width: 25%;
-    transform: rotate(65deg);
-    top: 16.25%;
-    left: 24%;
+    height: 26%;
+    width: 26%;
+    transform: rotate(66deg);
+    top: 20.5%;
+    left: 23.75%;
 }
 
 
@@ -912,7 +1036,7 @@ clip-path: polygon(30% 0, 0 100%, 100% 50%);
     height: 20%;
     width: 20%;
     top: 66%;
-    left: 41.5%;
+    left: 41%;
     z-index: 5;
 }
 
@@ -959,7 +1083,7 @@ clip-path: polygon(30% 0, 0 100%, 100% 50%);
     height: 20%;
     top: 72%;
     left: 31%;
-    z-index: -11;
+    z-index: -1;
 }
 
 .cat-label-top {
@@ -998,7 +1122,7 @@ clip-path: ellipse(50% 35% at 50% 50%);
     height: 70%;
     width: 80%;
     top: 50%;
-    left: 8%;
+    left: 7.75%;
     z-index: 5;
     }
 
@@ -1306,6 +1430,90 @@ clip-path: polygon(30% 0, 50% 15%, 80% 65%, 70% 100%, 35% 80%, 25% 25%);
 
 
 
+/* shopping bag / add item */
+.bag {
+  position: absolute;
+  height: 44%;
+  width: 23%;
+  top: 48%;
+  left: 49%;
+}
+
+.bag-back {
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  background: #b7750b;
+  height: 60%;
+  width: 44%;
+  left: 31.75%;
+  top: 20.25%;
+  z-index:1 ;
+}
+
+.bag-front {
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  background: #d68b13;
+  height: 60%;
+  width: 44%;
+  left: 20%;
+  top: 30%;
+  z-index: 2;
+}
+
+.bag-side {
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+  transform: rotate(90deg);
+  background: #bf7909;
+  height: 11.5%;
+  width: 66%;
+  top: 52.5%;
+  left: 36.75%;
+}
+
+.bag-inside {
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+  transform: rotate(90deg);
+  background: #bf7909;
+  height: 11.5%;
+  width: 66%;
+  top: 46.5%;
+  left: -7%;
+  z-index: 1;
+}
+
+.bag-arrow {
+  position: absolute;
+  -webkit-clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%);
+clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%);
+  transform: rotate(90deg) skew(-10deg);
+  background: #D84315;
+  height: 35%;
+  width: 55%;
+  top: 20%;
+  left: 22%;
+  z-index: 4;
+}
+
+.bag-text {
+  position: absolute;
+  transform: rotate(9deg);
+  font-family: monospace;
+  font-size: 15pt;
+  color: #D84315;
+  height: 1%;
+  width: 1%;
+  top: 60%;
+  left: 34%;
+  z-index: 4;
+
+}
 
 
 /* The Modal (background) */
@@ -1325,12 +1533,13 @@ clip-path: polygon(30% 0, 50% 15%, 80% 65%, 70% 100%, 35% 80%, 25% 25%);
 
 /* Modal Content/Box */
 .modal-content {
-     background: #FFE0B2;
-     height: 100%;
+     background: #eee;
+     height: 91%;
      overflow: auto; /* Enable scroll if needed */
      margin: 5% auto; /* 15% from the top and centered */
      padding: 20px;
      width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
 }
 
 .fridge-list-modal {
@@ -1348,7 +1557,7 @@ clip-path: polygon(30% 0, 50% 15%, 80% 65%, 70% 100%, 35% 80%, 25% 25%);
 }
 
 .tossed-list-modal {
-     /*display: none; !* Hidden by default *!*/
+     display: none; /* Hidden by default */
      position: absolute; /* Stay in place */
      z-index: 10; /* Sit on top */
      left: 49%;
@@ -1362,13 +1571,27 @@ clip-path: polygon(30% 0, 50% 15%, 80% 65%, 70% 100%, 35% 80%, 25% 25%);
 }
 
 .shopping-list-modal {
-     /*display: none; !* Hidden by default *!*/
+     display: none; /* Hidden by default */
      position: absolute; /* Stay in place */
      z-index: 10; /* Sit on top */
      left: 74.5%;
      top: 5%;
      width: 22%; /* Full width */
      height: 86%; /* Full height */
+     background: #FFE0B2;
+     border: 14px solid #D84315;
+     border-radius: 20px;
+     overflow: hidden;
+}
+
+.add-item-modal {
+     display: none; /* Hidden by default */
+     position: absolute; /* Stay in place */
+     z-index: 10; /* Sit on top */
+     left: 49%;
+     top: 45%;
+     width: 22%; /* Full width */
+     height: 46%; /* Full height */
      background: #FFE0B2;
      border: 14px solid #D84315;
      border-radius: 20px;

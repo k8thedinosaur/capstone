@@ -45,7 +45,13 @@
 
           <div id="freezer">
             <div class="container freezer-container">
+                <div class="freezer-inside-back"></div>
+              <div class="freezer-inside-left"></div>
+              <div class="freezer-inside-right"></div>
+              <p>
+              <br>
               <div class="row row-freezer">
+                <div class="freezer-shelf"></div>
 
         <!-- frozen -->
         <div class="box frozen-box">
@@ -126,25 +132,32 @@
 
           <div id="fridger">
               <div class="container fridge-container">
+                  <div class="inside-fridge-back"></div>
+                  <div class="inside-fridge-left"></div>
+                  <div class="inside-fridge-right"></div>
+                  <br>
                   <div class="row row-one">
+                      <div class="row-one-shelf"></div>
+                      <div class="shelf-edge-one"></div>
+
                         <!-- meat -->
-                        <div class="box meat-box">
+                        <div  id="meatBtn" class="box meat-box">
                           <div class="pic meat-pic">
                             <!--       content -->
                         </div>
-                          <div id="meatBtn" class="labels meat-label">meat</div>
+                          <div class="labels meat-label">meat</div>
                       </div>
 
                         <!-- seafood -->
-                        <div class="box seafood-box">
+                        <div id="seafoodBtn" class="box seafood-box">
                           <div class="pic seafood-pic">
                             <!--       content -->
                         </div>
-                          <div id="seafoodBtn" class="labels seafood-label">seafood</div>
+                          <div class="labels seafood-label">seafood</div>
                       </div>
 
                         <!-- dairy -->
-                        <div class="box dairy-box">
+                        <div id="dairyBtn" class="box dairy-box">
                           <div class="pic dairy-pic">
                             <div class="cheese-side"></div>
                             <div class="cheese-top"></div>
@@ -156,7 +169,7 @@
                               <!--         <div class="sad-mouth"></div> -->
                           </div>
                         </div>
-                          <div id="dairyBtn" class="labels dairy-label">dairy</div>
+                          <div class="labels dairy-label">dairy</div>
                       </div>
 
             <!--       end row-one -->
@@ -164,10 +177,13 @@
 
             <p>
 
-            <div class="row row-two">
+            <div id="vegBtn" class="row row-two">
+              <div class="row-two-shelf"></div>
+              <div class="shelf-edge-two"></div>
+
 
             <!-- veg -->
-            <div class="box veg-box">
+            <div id="vegBtn" class="box veg-box">
             <div class="pic veg-pic">
             <div class="broc-left-leg"></div>
             <div class="broc-middle-leg"></div>
@@ -184,23 +200,23 @@
               <!--         <div class="sad-mouth"></div> -->
           </div>
         </div>
-          <div id="vegBtn" class="labels veg-label">veg</div>
+          <div class="labels veg-label">veg</div>
       </div>
 
             <!-- fruit -->
-            <div class="box fruit-box">
+            <div id="fruitBtn" class="box fruit-box">
           <div class="pic fruit-pic">
             <!--       content -->
         </div>
-          <div id="fruitBtn" class="labels fruit-label">fruit</div>
+          <div class="labels fruit-label">fruit</div>
       </div>
 
             <!-- fruit -->
-            <div class="box leftovers-box">
+            <div id="leftoversBtn" class="box leftovers-box">
           <div class="pic leftovers-pic">
             <!--       content -->
         </div>
-          <div id="leftoversBtn" class="labels leftovers-label">leftovers</div>
+          <div class="labels leftovers-label">leftovers</div>
       </div>
 
             <!--     end row-two -->
@@ -209,9 +225,10 @@
             <p>
 
             <div class="row row-three">
+                  <div class="row-three-shelf"></div>
 
             <!-- alcohol -->
-            <div class="box alcohol-box">
+            <div id="alcoholBtn" class="box alcohol-box">
           <div class="pic alcohol-pic">
             <div class="bottle-cork"></div>
             <div class="bottle-top"></div>
@@ -233,11 +250,11 @@
               <!--         <div class="sad-mouth"></div> -->
           </div>
         </div>
-          <div id="alcoholBtn" class="labels alcohol-label">alcohol</div>
+          <div class="labels alcohol-label">alcohol</div>
       </div>
 
             <!-- non-edible -->
-            <div class="box nonedible-box">
+            <div id="nonedibleBtn" class="box nonedible-box">
           <div class="pic nonedible-pic">
             <div class="can-lid">
           <div class="can-lid-circle"></div>
@@ -261,15 +278,15 @@
           <!--         <div class="sad-mouth"></div> -->
         </div>
         </div>
-          <div id="nonedibleBtn" class="labels nonedible-label">non-edible</div>
+          <div class="labels nonedible-label">non-edible</div>
       </div>
 
             <!-- other -->
-            <div class="box other-box">
+            <div id="otherBtn" class="box other-box">
           <div class="pic other-pic">
             <!--       content -->
         </div>
-          <div id="otherBtn" class="labels other-label">other</div>
+          <div class="labels other-label">other</div>
       </div>
             <!--       end row-three -->
         </div>
@@ -283,11 +300,11 @@
             <div class="door-container">
               <div class="row door-row-one">
         <!-- condiments -->
-        <div class="box condiments-box">
+        <div id="condimentsBtn" class="box condiments-box">
           <div class="pic condiments-pic">
             <!--       content -->
         </div>
-          <div id="condimentsBtn" class="labels condiments-label">condiments</div>
+          <div class="labels condiments-label">condiments</div>
       </div>
     </div>
 
@@ -295,11 +312,11 @@
 
               <div class="row door-row-two">
         <!-- sauces -->
-        <div class="box sauces-box">
+        <div id="saucesBtn" class="box sauces-box">
           <div class="pic sauces-pic">
             <!--       content -->
         </div>
-          <div id="saucesBtn" class="labels sauces-label">sauces</div>
+          <div class="labels sauces-label">sauces</div>
       </div>
 
     </div>
@@ -308,7 +325,7 @@
 
               <div class="row door-row-three">
         <!-- beverages -->
-        <div class="box beverages-box">
+        <div id="beveragesBtn" class="box beverages-box">
           <div class="pic beverages-pic">
             <div class="oj-cap"></div>
         <div class="oj-bottle-top"></div>
@@ -327,7 +344,7 @@
           <!--         <div class="sad-mouth"></div> -->
         </div>
         </div>
-          <div id="beveragesBtn" class="labels beverages-label">beverages</div>
+          <div class="labels beverages-label">beverages</div>
       </div>
         <!--      end door row three -->
     </div>
@@ -409,6 +426,18 @@
 
 
   <!-- end notice board -->
+
+
+{#    shopping bag / add item#}
+      <div class="bag">
+        <div class="bag-back"></div>
+        <div class="bag-front" id="addItemBtn">
+            <div class="bag-arrow"></div>
+            <div class="bag-text">&nbsp;add items</div>
+        </div>
+        <div class="bag-side"></div>
+        <div class="bag-inside"></div>
+      </div>
 
 
         <div id="frozenModal" class="modal">
@@ -596,7 +625,100 @@
         <div id="fridgeListModal" class="fridge-list-modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                fridge
+                <h3>fridge list</h3>
+                <p class="category-title">Meat<br>
+                    {% for m in meat %}
+                        <ul>
+                            <li>{{ m.name }} ({{ m.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Seafood<br>
+                    {% for s in seafood %}
+                        <ul>
+                            <li>{{ s.name }} ({{ s.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Dairy<br>
+                    {% for d in dairy %}
+                        <ul>
+                            <li>{{ d.name }} ({{ d.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Veg<br>
+                    {% for v in veg %}
+                        <ul>
+                            <li>{{ v.name }} ({{ v.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Fruit<br>
+                    {% for f in fruit %}
+                        <ul>
+                            <li>{{ f.name }} ({{ f.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Leftovers<br>
+                    {% for l in leftovers %}
+                        <ul>
+                            <li>{{ l.name }} ({{ l.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Alcohol<br>
+                    {% for a in alcohol %}
+                        <ul>
+                            <li>{{ a.name }} ({{ a.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Non-Edible<br>
+                    {% for n in nonedible %}
+                        <ul>
+                            <li>{{ n.name }} ({{ n.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Other<br>
+                    {% for u in unknown %}
+                        <ul>
+                            <li>{{ u.name }} ({{ u.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Condiments<br>
+                    {% for c in condiments %}
+                        <ul>
+                            <li>{{ c.name }} ({{ c.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Sauces<br>
+                    {% for sa in sauces %}
+                        <ul>
+                            <li>{{ sa.name }} ({{ sa.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Beverages<br>
+                    {% for b in beverages %}
+                        <ul>
+                            <li>{{ b.name }} ({{ b.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Frozen<br>
+                    {% for fr in frozen %}
+                        <ul>
+                            <li>{{ fr.name }} ({{ fr.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Heat-n-Eat<br>
+                    {% for h in heatneat %}
+                        <ul>
+                            <li>{{ h.name }} ({{ h.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+                <p class="category-title">Desserts<br>
+                    {% for de in desserts %}
+                        <ul>
+                            <li>{{ de.name }} ({{ de.quantity }})</li>
+                        </ul>
+                    {% endfor %}
+
+
+
             </div>
         </div>
         <div id="tossedListModal" class="tossed-list-modal">
@@ -609,6 +731,13 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 shopping
+            </div>
+        </div>
+
+        <div id="addItemModal" class="add-item-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                add item
             </div>
         </div>
 
