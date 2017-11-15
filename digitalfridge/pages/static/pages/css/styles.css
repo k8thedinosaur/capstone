@@ -46,8 +46,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   position: relative;
   height: 75%;
   width: 100%;
-background-color: #9bddc9;
-background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230fa1a1' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #9bddc9;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230fa1a1' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 
@@ -1332,7 +1332,7 @@ clip-path: polygon(30% 0, 50% 15%, 80% 65%, 70% 100%, 35% 80%, 25% 25%);
 
 #fridge-list-label {
   position: relative;
-  background: #51a3ef;
+  background: #3aa8a2;
   border-radius: 5px;
   width: 80%;
   height: 20%;
@@ -1355,7 +1355,7 @@ clip-path: polygon(30% 0, 50% 15%, 80% 65%, 70% 100%, 35% 80%, 25% 25%);
 
 #tossed-list-label {
   position: relative;
-  background: #f4c242;
+  background: #d69c46;
   border-radius: 5px;
   width: 80%;
   height: 20%;
@@ -1448,7 +1448,7 @@ clip-path: polygon(30% 0, 50% 15%, 80% 65%, 70% 100%, 35% 80%, 25% 25%);
   width: 44%;
   left: 31.75%;
   top: 20.25%;
-  z-index:1 ;
+  z-index: 1;
 }
 
 .bag-front {
@@ -1473,6 +1473,7 @@ clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
   width: 66%;
   top: 52.5%;
   left: 36.75%;
+    z-index: 2;
 }
 
 .bag-inside {
@@ -1533,7 +1534,7 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
 
 /* Modal Content/Box */
 .modal-content {
-     background: #eee;
+     background: #9bddc9;
      height: 91%;
      overflow: auto; /* Enable scroll if needed */
      margin: 5% auto; /* 15% from the top and centered */
@@ -1582,6 +1583,16 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
      border: 14px solid #D84315;
      border-radius: 20px;
      overflow: hidden;
+}
+
+.add-modal-content {
+     background: #9bddc9;
+     height: 82%;
+     overflow: auto; /* Enable scroll if needed */
+     margin: 5% auto; /* 15% from the top and centered */
+     padding: 20px;
+     width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
 }
 
 .add-item-modal {

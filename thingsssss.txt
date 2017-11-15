@@ -4,22 +4,25 @@ can "expires" be made into an if/else statement to apply a default value based o
 how to aggregate time (count between date_added and expires) and/or make action happen when date item expires is reached?
 	(research timedelta further)
 
-how to add item's name to tossed list on delete? (or just before delete? function inside delete?)
+~how to add item's name to tossed list on delete? (or just before delete? function inside delete?)
 	(maybe...create new model classes for "used" and "tossed", and item is moved/assigned to one or the other on button click; tossed list is displayed and used list is not user-interactable [same as deleted, except not])
-	(or...boolean field "tossed" vs regular delete for used)
+	(or...boolean field "tossed" vs regular delete for used)~
 
 ~how to get filters to work? (more reading, blerg [or do like humans do and watch a youtube])~
 
 ~split into template blah-blah, drag css over from codepen~
 
-figure out javascript overlays (modals)
+~figure out javascript overlays (modals)~
 
-insert forms into modals
-	(placeholder="Title...")
+~insert forms into modals
+	(placeholder="Title...")~
 
 ~add to github!~
 
+figure out how to exclude tossed items from fridge item view, since they are not deleted
 
+make "saveable" shopping list
+	new model class with just name?
 
 
 
