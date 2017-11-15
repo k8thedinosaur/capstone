@@ -1522,9 +1522,9 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
      display: none; /* Hidden by default */
      position: absolute; /* Stay in place */
      z-index: 10; /* Sit on top */
-     left: 49%;
+     left: 1%;
      top: 5%;
-     width: 22%; /* Full width */
+     width: 45%; /* Full width */
      height: 86%; /* Full height */
      background: #FFE0B2;
      border: 14px solid #D84315;

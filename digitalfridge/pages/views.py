@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
-from django.utils import timezone
-from .forms import ItemForm, ShopForm
+from django.shortcuts import render, redirect, render_to_response
+from django.template import RequestContext
+from .forms import ItemForm
 from .models import Item, ShopItem
 
 
@@ -24,21 +24,26 @@ def home(request):
     tossed = Item.objects.filter(tossed__exact=True)
     shop_item = ShopItem.objects.all()
 
-    # if request.method == "POST":
-    #     add_form = ItemForm(request.POST)
-    #     if add_form.is_valid():
-    #         add_form.save()
-    #         return redirect('/')
-    # else:
-    #     add_form = ItemForm()
+    if (request.GET.get('DeleteButton')):
+        Item.objects.filter(id=request.GET.get('DeleteButton')).delete()
+        return redirect('/')
 
-    if request.method == "POST":
-        shop_form = ShopForm(request.POST)
-        if shop_form.is_valid():
-            shop_form.save()
+    if 'addButton' in request.POST:
+        add_form = ItemForm(request.POST)
+        if add_form.is_valid():
+            add_form.save()
             return redirect('/')
-    else:
-        shop_form = ShopForm()
-    return render(request, 'pages/home.html', {'contents': contents, 'frozen': frozen, 'heatneat': heatneat, 'desserts': desserts, 'meat': meat, 'seafood': seafood, 'dairy': dairy, 'veg': veg, 'fruit': fruit, 'leftovers': leftovers, 'alcohol': alcohol, 'nonedible': nonedible, 'other': other, 'condiments': condiments, 'sauces': sauces, 'beverages': beverages, 'tossed': tossed, 'shop_item': shop_item, 'shop_form': shop_form})
+    # elif 'shopButton' in request.POST:
+    #     shop_form = ShopForm(request.POST)
+    #     if shop_form.is_valid():
+    #         shop_form.save()
+    #         return redirect('/')
 
-    # 'add_form': add_form},
+    else:
+        add_form = ItemForm()
+        # shop_form = ShopForm()
+
+    return render(request, 'pages/home.html', {'contents': contents, 'frozen': frozen, 'heatneat': heatneat, 'desserts': desserts, 'meat': meat, 'seafood': seafood, 'dairy': dairy, 'veg': veg, 'fruit': fruit, 'leftovers': leftovers, 'alcohol': alcohol, 'nonedible': nonedible, 'other': other, 'condiments': condiments, 'sauces': sauces, 'beverages': beverages, 'tossed': tossed, 'shop_item': shop_item, 'add_form': add_form})
+ # 'shop_form': shop_form,
+
+

@@ -615,8 +615,9 @@
                 <p id="category-title">Beverages<br>
                 {% for b in beverages %}
                     <div class="item-detail">
-                   {{ b.name }}<br>
-                   <ul><li>{{ b.intended_use }}</li></ul>
+                   <form action="" method="get">
+                                <button class = "btn btn-default" name="DeleteButton" value="{{ b.id }}">&times;</button>
+                        </form>{{ b.name }}
                     </div><br>
                    {% endfor %}
             </div>
@@ -742,12 +743,14 @@
                 shopping<br>
                 {% for item in shop_item %}
                     <ul>
-                        <li>{{ item.name }}</li>
+                        <li>{{ item.name }} <form action="" method="get">
+                                <button class = "btn btn-default" name="DeleteButton" value="{{ item.id }}">&times;</button>
+                        </form></li>
                     </ul>
                 {%  endfor %}
                 {% csrf_token %}
-                {{ shop_form }}
-                <button type="submit" class="btn btn-default">+</button>
+                {{ shop_form.as_p }}
+                <button type="submit" class="btn btn-default" name="shopButton">Add!</button>
             </div>
         </div>
 
@@ -758,7 +761,7 @@
                     <form method="post">
                     {% csrf_token %}
                     {{ add_form.as_p }}
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default" name="addButton">Submit</button>
                 </form>
             </div>
         </div>
