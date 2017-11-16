@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SOMETHING (or not)</title>
+    <title>Digital Fridge</title>
     <link rel="stylesheet" href="{% static 'pages/css/styles.css' %}">
 </head>
 {#<body>#}
@@ -446,8 +446,28 @@
                 <p id="category-title">Frozen<br>
                 <p>{% for f in frozen %}
                    <div class="item-detail">
-                       {{ f.name }}<br>
-                       <ul><li>{{ f.intended_use }}</li></ul>
+                       <span class="item-detail-titles">Name:</span> <span class="item-detail-values">{{ f.name }}</span>
+                            <br>
+                        <span class="item-detail-titles">Quantity:</span> {{ f.quantity }}
+                            <br>
+                        <span class="item-detail-titles">Calories:</span> {{ f.calories }}
+                            <br>
+                       <span class="item-detail-titles"> Purchased:</span> {{ f.date_added }}
+                            <br>
+                        <span class="item-detail-titles">Expires:</span> {{ f.expires }}
+                            <br>
+                        <span class="item-detail-titles">Intended Use:</span> {{ f.intended_use }}
+
+
+<form action="" method="get">
+                                <button class = "btn btn-default" name="DeleteButton" value="{{ f.id }}">Used!</button>
+                        </form>
+
+
+
+
+
+
                    </div><br>
                    {% endfor %}
             </div>
@@ -744,7 +764,7 @@
                 {% for item in shop_item %}
                     <ul>
                         <li>{{ item.name }} <form action="" method="get">
-                                <button class = "btn btn-default" name="DeleteButton" value="{{ item.id }}">&times;</button>
+                                <button class = "btn btn-default" name="ShopDeleteButton" value="{{ item.id }}">&times;</button>
                         </form></li>
                     </ul>
                 {%  endfor %}

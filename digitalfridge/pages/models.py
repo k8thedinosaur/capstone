@@ -56,7 +56,7 @@ class Item(models.Model):
         default='Other',
     )
     name = models.CharField(max_length=100)
-    quantity = models.IntegerField(default=1, verbose_name='Quantity/Servings')
+    quantity = models.IntegerField(default=1)
     date_added = models.DateField()
     expires = models.DateField()
     calories = models.IntegerField(blank=True, null=True)

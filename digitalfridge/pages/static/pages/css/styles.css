@@ -1534,7 +1534,7 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
 
 /* Modal Content/Box */
 .modal-content {
-     background: #9bddc9;
+     background: #FFE0B2;
      height: 91%;
      overflow: auto; /* Enable scroll if needed */
      margin: 5% auto; /* 15% from the top and centered */
@@ -1630,4 +1630,19 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
      border-radius: 10px;
      /*margin: 5%;*/
      padding: 5%;
+}
+
+
+.item-detail-titles {
+    font-weight: bold;
+}
+
+.item-detail-values {
+    /*text-decoration: underline;*/
+}
+
+form, table {
+     display:inline;
+     margin:0px;
+     padding:0px;
 }

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
-from .forms import ItemForm
+from .forms import ItemForm, ShopForm
 from .models import Item, ShopItem
 
 
@@ -24,20 +24,24 @@ def home(request):
     tossed = Item.objects.filter(tossed__exact=True)
     shop_item = ShopItem.objects.all()
 
-    if (request.GET.get('DeleteButton')):
+    if request.GET.get('DeleteButton'):
         Item.objects.filter(id=request.GET.get('DeleteButton')).delete()
         return redirect('/')
+
+    if request.GET.get('ShopDeleteButton'):
+        ShopItem.objects.filter(id=request.GET.get('ShopDeleteButton')).delete()
 
     if 'addButton' in request.POST:
         add_form = ItemForm(request.POST)
         if add_form.is_valid():
             add_form.save()
             return redirect('/')
-    # elif 'shopButton' in request.POST:
-    #     shop_form = ShopForm(request.POST)
-    #     if shop_form.is_valid():
-    #         shop_form.save()
-    #         return redirect('/')
+
+    if 'shopButton' in request.POST:
+        shop_form = ShopForm(request.POST)
+        if shop_form.is_valid():
+            shop_form.save()
+            return redirect('/')
 
     else:
         add_form = ItemForm()
