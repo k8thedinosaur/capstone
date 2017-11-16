@@ -1525,7 +1525,7 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
      left: 1%;
      top: 5%;
      width: 45%; /* Full width */
-     height: 86%; /* Full height */
+     height: 86.25%; /* Full height */
      background: #FFE0B2;
      border: 14px solid #D84315;
      border-radius: 20px;
@@ -1535,7 +1535,7 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
 /* Modal Content/Box */
 .modal-content {
      background: #FFE0B2;
-     height: 91%;
+     height: 89.5%;
      overflow: auto; /* Enable scroll if needed */
      margin: 5% auto; /* 15% from the top and centered */
      padding: 20px;
@@ -1550,7 +1550,7 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
      left: 49%;
      top: 5%;
      width: 22%; /* Full width */
-     height: 86%; /* Full height */
+     height: 86.25%; /* Full height */
      background: #FFE0B2;
      border: 14px solid #D84315;
      border-radius: 20px;
@@ -1578,7 +1578,7 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
      left: 74.5%;
      top: 5%;
      width: 22%; /* Full width */
-     height: 86%; /* Full height */
+     height: 86.25%; /* Full height */
      background: #FFE0B2;
      border: 14px solid #D84315;
      border-radius: 20px;
@@ -1643,6 +1643,6 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
 
 form, table {
      display:inline;
-     margin:0px;
-     padding:0px;
+     margin:0;
+     padding:0;
 }

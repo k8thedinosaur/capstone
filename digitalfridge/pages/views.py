@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect, render_to_response
-from django.template import RequestContext
+from django.shortcuts import render, redirect
 from .forms import ItemForm, ShopForm
 from .models import Item, ShopItem
 
@@ -30,6 +29,7 @@ def home(request):
 
     if request.GET.get('ShopDeleteButton'):
         ShopItem.objects.filter(id=request.GET.get('ShopDeleteButton')).delete()
+        return redirect('/')
 
     if 'addButton' in request.POST:
         add_form = ItemForm(request.POST)
@@ -45,9 +45,5 @@ def home(request):
 
     else:
         add_form = ItemForm()
-        # shop_form = ShopForm()
-
-    return render(request, 'pages/home.html', {'contents': contents, 'frozen': frozen, 'heatneat': heatneat, 'desserts': desserts, 'meat': meat, 'seafood': seafood, 'dairy': dairy, 'veg': veg, 'fruit': fruit, 'leftovers': leftovers, 'alcohol': alcohol, 'nonedible': nonedible, 'other': other, 'condiments': condiments, 'sauces': sauces, 'beverages': beverages, 'tossed': tossed, 'shop_item': shop_item, 'add_form': add_form})
- # 'shop_form': shop_form,
-
-
+        shop_form = ShopForm()
+    return render(request, 'pages/home.html', {'contents': contents, 'frozen': frozen, 'heatneat': heatneat, 'desserts': desserts, 'meat': meat, 'seafood': seafood, 'dairy': dairy, 'veg': veg, 'fruit': fruit, 'leftovers': leftovers, 'alcohol': alcohol, 'nonedible': nonedible, 'other': other, 'condiments': condiments, 'sauces': sauces, 'beverages': beverages, 'tossed': tossed, 'shop_item': shop_item, 'add_form': add_form, 'shop_form': shop_form})

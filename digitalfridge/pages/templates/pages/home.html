@@ -459,7 +459,7 @@
                         <span class="item-detail-titles">Intended Use:</span> {{ f.intended_use }}
 
 
-<form action="" method="get">
+                        <form action="" method="get">
                                 <button class = "btn btn-default" name="DeleteButton" value="{{ f.id }}">Used!</button>
                         </form>
 
@@ -644,7 +644,7 @@
         </div>
 
         <div id="fridgeListModal" class="fridge-list-modal">
-            <div class="modal-content">
+            <div class="modal-content item-detail">
                 <span class="close">&times;</span>
                 <h3>fridge list</h3>
                 <p class="category-title">Meat<br>
@@ -745,7 +745,7 @@
             </div>
         </div>
         <div id="tossedListModal" class="tossed-list-modal">
-            <div class="modal-content">
+            <div class="modal-content item-detail">
                 <span class="close">&times;</span>
                 tossed<br>
                 {% for t in tossed %}
@@ -758,19 +758,23 @@
             </div>
         </div>
         <div id="shoppingListModal" class="shopping-list-modal">
-            <div class="modal-content">
+            <div class="modal-content item-detail">
                 <span class="close">&times;</span>
                 shopping<br>
                 {% for item in shop_item %}
                     <ul>
-                        <li>{{ item.name }} <form action="" method="get">
+                        <li>{{ item.name }}
+                        <form name="shopDeleteForm" action="" method="get">
                                 <button class = "btn btn-default" name="ShopDeleteButton" value="{{ item.id }}">&times;</button>
                         </form></li>
                     </ul>
                 {%  endfor %}
-                {% csrf_token %}
-                {{ shop_form.as_p }}
-                <button type="submit" class="btn btn-default" name="shopButton">Add!</button>
+
+                    <form name="shopForm" method="post">
+                        {% csrf_token %}
+                        {{ shop_form.as_p}}
+                        <button type="submit" class="btn btn-default" name="shopButton">Add!</button>
+                    </form>
             </div>
         </div>
 
@@ -782,7 +786,7 @@
                     {% csrf_token %}
                     {{ add_form.as_p }}
                     <button type="submit" class="btn btn-default" name="addButton">Submit</button>
-                </form>
+                    </form>
             </div>
         </div>
 
