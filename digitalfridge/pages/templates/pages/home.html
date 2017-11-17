@@ -406,7 +406,7 @@
                                         <td>{{ f.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ f.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -453,7 +453,7 @@
                                         <td>{{ h.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ h.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -500,7 +500,7 @@
                                         <td>{{ de.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ de.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -547,7 +547,7 @@
                                         <td>{{ m.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ m.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -594,7 +594,7 @@
                                         <td>{{ s.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ s.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -641,7 +641,7 @@
                                         <td>{{ da.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ da.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -688,7 +688,7 @@
                                         <td>{{ v.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ v.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -735,7 +735,7 @@
                                         <td>{{ f.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ f.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -782,7 +782,7 @@
                                         <td>{{ l.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ l.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -829,7 +829,7 @@
                                         <td>{{ a.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ a.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -876,7 +876,7 @@
                                         <td>{{ n.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ n.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -923,7 +923,7 @@
                                         <td>{{ o.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ o.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -970,7 +970,7 @@
                                         <td>{{ c.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ c.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -1017,7 +1017,7 @@
                                         <td>{{ sa.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ sa.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -1064,7 +1064,7 @@
                                         <td>{{ b.intended_use }}</td>
                                     </tr>
                                 </table>
-                                <form action="" method="">
+                                <form action="" method="get">
                                     <button class="btn tossed" name="TossedButton" value="{{ b.id }}">Tossed</button>
                                 </form>
                                 <form action="" method="get">
@@ -1204,16 +1204,9 @@
                 <div id="shoppingListModal" class="shopping-list-modal">
                     <div class="small-modal-header">
                         <span class="close">&times;</span>
-                        <h3>Shopping List</h3>
+                        <span class="headers"><h3>Shopping List</h3></span>
                     </div>
-                    <div class="small-modal-content item-detail">
-                        <form name="shopForm" method="post">
-                            <button type="submit" class="btn shop-add" name="shopButton">Add!</button>
-                            {% csrf_token %}
-                            {{ shop_form.as_p}}
-                         </form>
-                        <hr>
-                        <p>
+                    <div class="shopping-list-content item-detail">
                         {% for item in shop_item %}
                             <form name="shopDeleteForm" action="" method="get">
                                 <button class = "btn shop-delete" name="ShopDeleteButton" value="{{ item.id }}">&times;</button>
@@ -1221,6 +1214,14 @@
                             {{ item.name }}
                             <p>
                         {%  endfor %}
+                    </div>
+                    <div class="shopping-list-add">
+                        <p>
+                        <form name="shopForm" method="post">
+                            <button type="submit" class="btn shop-add" name="shopButton">Add!</button>
+                            {% csrf_token %}
+                            {{ shop_form.as_p}}
+                         </form>
                     </div>
                 </div>
                 <div id="addItemModal" class="add-item-modal">

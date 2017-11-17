@@ -14,15 +14,12 @@ body {
 }
 
 #border {
-/*    position: fixed; */
     position: absolute;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-/*    padding: 20px; */
     width: 1820px;
     height: 980px;
-/*    left: ; */
     border: 14px solid #D84315;
     border-radius: 20px;
     overflow: hidden;
@@ -44,7 +41,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 #wall {
   position: relative;
-  height: 75%;
+  height: 76%;
   width: 100%;
   background-color: #9bddc9;
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230fa1a1' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
@@ -366,6 +363,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    letter-spacing: .2px;
 }
 
 .left-eye {
@@ -1466,7 +1464,7 @@ clip-path: polygon(30% 0, 50% 15%, 80% 65%, 70% 100%, 35% 80%, 25% 25%);
 .bag-side {
   position: absolute;
   -webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
-clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
   transform: rotate(90deg);
   background: #bf7909;
   height: 11.5%;
@@ -1538,9 +1536,10 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
     width: 78%;
     margin: 5% 5% 0 5%;
     padding: 0 20px 10px 20px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     background: #fff3c5;
     border: 5px solid #D84315;
+    border-bottom: none;
 }
 
 .small-modal-content {
@@ -1549,7 +1548,7 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
     margin: -1% 5% 5% 5%; /* 15% from the top and centered */
     padding: 20px;
     width: 82%; /* Could be more or less, depending on screen size */
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px;
     background: #fff3c5;
     border: 5px solid #D84315;
 }
@@ -1559,17 +1558,18 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
     width: 91%;
     margin: 1.5% 1.5% 0 1.5%;
     padding: 0 20px 10px 20px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     background: #fff3c5;
     border: 5px solid #D84315;
+    border-bottom: none;
 }
 
 .large-modal-content {
     height: 89.25%;
     overflow: auto; /* Enable scroll if needed */
     margin: -.5% 1.5% 2% 1.5%;
-    width: 96%;
-    border-radius: 8px;
+    width: 96.1%;
+    border-radius: 0 0 8px 8px;
     background: #fff3c5;
     border: 5px solid #D84315;
 }
@@ -1615,6 +1615,30 @@ clip-path: polygon(50% 0, 50% 25%, 100% 25%, 100% 75%, 50% 75%, 50% 100%, 0% 50%
      border: 14px solid #D84315;
      border-radius: 20px;
      overflow: hidden;
+}
+
+.shopping-list-content {
+    height: 80%;
+    overflow: auto; /* Enable scroll if needed */
+    margin: -1% 5% 5% 5%; /* 15% from the top and centered */
+    padding: 20px;
+    width: 82%; /* Could be more or less, depending on screen size */
+    border-radius: 8px 8px 0 0;
+    background: #fff3c5;
+    border: 5px solid #D84315;
+}
+
+.shopping-list-add {
+    position: absolute;
+    height: 5%;
+    width: 78%;
+    bottom: 2.5%;
+    margin: 5% 5% 0 5%;
+    padding: 0 20px 10px 20px;
+    border-radius: 0 0 8px 8px;
+    background: #fff3c5;
+    border: 5px solid #D84315;
+    border-top: none;
 }
 
 .add-modal-content {
@@ -1693,10 +1717,6 @@ hr {
     padding: 0;
 }
 
-h3 {
-    text-decoration: underline;
-}
-
 .right-align {
     text-align: right
 }
@@ -1739,4 +1759,26 @@ h3 {
 
 .button-form {
     display: inline;
+}
+
+.item {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 80%;
+}
+
+.item-buttons {
+    position: absolute;
+    top: 0%;
+    left: 80%;
+}
+
+.headers {
+}
+
+h3 {
+    font-size: 16pt;
+    line-height: 10px;
+    padding: 0 10px;
 }

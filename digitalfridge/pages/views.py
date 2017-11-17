@@ -20,7 +20,7 @@ def home(request):
     condiments = Item.objects.filter(category__startswith='Condiments', tossed__exact=False)
     sauces = Item.objects.filter(category__startswith='Sauces', tossed__exact=False)
     beverages = Item.objects.filter(category__startswith='Bev', tossed__exact=False)
-    tossed = Item.objects.filter(tossed__exact=True)
+    tossed = Item.objects.filter(tossed__exact=True).order_by('date_added')
     shop_item = ShopItem.objects.all()
 
     if request.GET.get('DeleteButton'):
@@ -30,6 +30,9 @@ def home(request):
     if request.GET.get('ShopDeleteButton'):
         ShopItem.objects.filter(id=request.GET.get('ShopDeleteButton')).delete()
         return redirect('/')
+
+    if request.GET.get('TossedButton'):
+        Item.objects.filter(id=request.GET.get('TossedButton')).update(tossed=True)
 
     if 'addButton' in request.POST:
         add_form = ItemForm(request.POST)

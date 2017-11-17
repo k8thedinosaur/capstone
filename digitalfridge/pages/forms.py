@@ -24,3 +24,9 @@ class DeleteShoppingForm(forms.ModelForm):
     class Meta:
         model = ShopItem
         fields = []
+
+
+class TossedForm(forms.ModelForm):
+    class Meta:
+        model = Item
+        fields = ['tossed']

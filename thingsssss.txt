@@ -1,9 +1,3 @@
-in Models > Items
-can "expires" be made into an if/else statement to apply a default value based on category chosen?
-
-how to aggregate time (count between date_added and expires) and/or make action happen when date item expires is reached?
-	(research timedelta further)
-
 ~how to add item's name to tossed list on delete? (or just before delete? function inside delete?)
 	(maybe...create new model classes for "used" and "tossed", and item is moved/assigned to one or the other on button click; tossed list is displayed and used list is not user-interactable [same as deleted, except not])
 	(or...boolean field "tossed" vs regular delete for used)~
@@ -19,15 +13,21 @@ how to aggregate time (count between date_added and expires) and/or make action 
 
 ~add to github!~
 
-figure out how to exclude tossed items from fridge item view, since they are not deleted
+~figure out how to exclude tossed items from fridge item view, since they are not deleted~
 
-make "saveable" shopping list
-	new model class with just name?
+~make "saveable" shopping list
+	new model class with just name?~
+
+~how to delete objects on-page~
 
 
 
 
+in Models > Items
+can "expires" be made into an if/else statement to apply a default value based on category chosen?
+
+how to aggregate time (count between date_added and expires) and/or make action happen when date item expires is reached?
+	(research timedelta further)
 
 possible answers to time problem:
-
-get seconds of expiry date and added date, write function to subtract them, add this output as another variable to be operated on
+	get seconds of expiry date and added date, write function to subtract them, add this output as another variable to be operated on
