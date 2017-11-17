@@ -11,7 +11,7 @@ class ItemForm(forms.ModelForm):
 class ShopForm(forms.ModelForm):
     class Meta:
         model = ShopItem
-        fields = ['name', 'number']
+        fields = ['name']
 
 
 class DeleteItemForm(forms.ModelForm):

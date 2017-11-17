@@ -55,7 +55,7 @@ class Item(models.Model):
         choices=CATEGORY_CHOICES,
         default='Other',
     )
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=50)
     quantity = models.IntegerField(default=1)
     date_added = models.DateField()
     expires = models.DateField()

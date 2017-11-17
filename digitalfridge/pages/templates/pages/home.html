@@ -6,794 +6,1237 @@
     <meta charset="UTF-8">
     <title>Digital Fridge</title>
     <link rel="stylesheet" href="{% static 'pages/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Coustard|Coustard-Black" rel="stylesheet">
 </head>
-{#<body>#}
-{#thingsome <br>#}
-{##}
-{#<h3>All Items</h3>#}
-{#{% for i in contents %}#}
-{#    {{ i.name }}: {{ i.intended_use }}<br>#}
-{#{% endfor %}#}
-{#<p>#}
-{#<h3>Category: Unknown</h3>#}
-{#{% for u in unknown %}#}
-{#{{ u.name }}<br>#}
-{#{% endfor %}#}
-{#</body>#}
-
 <body>
-  <div id="page-wrapper">
-
-
-    <div id="border">
-
-      <div id="wall">
-        <div id="floor"></div>
-      </div>
-
-{#                <div id="shopping-list">#}
-{#                    <div id="myDIV" class="header">#}
-{#                      <h2 style="margin:5px">Shopping List</h2>#}
-{#                      <input type="text" id="myInput" placeholder="Item..."><span onclick="newElement()" class="addBtn">Add</span>#}
-{#                    </div>#}
-{##}
-{#                    <ul id="myUL">#}
-{##}
-{#                    </ul>#}
-{#                </div>#}
-        <div id="fridge-box">
-
-          <div id="freezer">
-            <div class="container freezer-container">
-                <div class="freezer-inside-back"></div>
-              <div class="freezer-inside-left"></div>
-              <div class="freezer-inside-right"></div>
-              <p>
-              <br>
-              <div class="row row-freezer">
-                <div class="freezer-shelf"></div>
-
-        <!-- frozen -->
-        <div id="frozenBtn" class="box frozen-box">
-          <div class="pic frozen-pic">
-            <div class="frozen-bag-body">
-                <div class="frozen-bag-top">
-                <div class="frozen-bag-zipper"></div>
+    <div id="page-wrapper">
+        <div id="border">
+            <div id="wall">
+                <div id="floor"></div>
             </div>
-                <div class="chicken-leg">
-                <div class="bone"></div>
-                <div class="bone-end1"></div>
-                <div class="bone-end2"></div>
-                <div class="chicken"></div>
-            </div>
-            </div>
-            <div class="frozen-little-face">
-              <div class="left-eye"></div>
-              <div class="right-eye"></div>
-              <div class="happy-mouth"></div>
-              <!--         <div class="sad-mouth"></div> -->
-          </div>
-        </div>
-          <div class="labels frozen-label">frozen</div>
-      </div>
 
-        <!-- heat-n-eat -->
-        <div id="heatneatBtn" class="box heatneat-box">
-          <div class="pic heatneat-pic">
-            <div class="heatneat-box-top"></div>
-            <div class="heatneat-box-side"></div>
-            <div class="heatneat-box-face">
-              <div class="heatneat-text">foodlike</div>
-              <div class="heatneat-tray-bottom"></div>
-              <div class="heatneat-tray-top"></div>
-              <div class="foodlump1"></div>
-              <div class="foodlump2"></div>
-              <div class="meatlump-shadow"></div>
-              <div class="meatlump-body"></div>
-              <div class="meatlump-highlight"></div>
-          </div>
-            <div class="heatneat-little-face">
-              <div class="left-eye"></div>
-              <div class="right-eye"></div>
-              <div class="happy-mouth"></div>
-              <!--         <div class="sad-mouth"></div> -->
-          </div>
-        </div>
-          <div class="labels heatneat-label">heat-n-eat</div>
-      </div>
+            <div id="fridge-box">
 
-        <!-- desserts -->
-        <div id="dessertsBtn" class="box desserts-box">
-          <div class="pic desserts-pic">
-            <div class="cone-bottom"></div>
-            <div class="cone-body"></div>
-            <div class="cone-top-edge"></div>
-            <div class="cone-rim"></div>
-            <div class="ice-cream-bottom"></div>
-            <div class="ice-cream-top"></div>
-            <div class="desserts-little-face">
-              <div class="left-eye"></div>
-              <div class="right-eye"></div>
-              <div class="happy-mouth"></div>
-              <!--         <div class="sad-mouth"></div> -->
-          </div>
-        </div>
-          <div class="labels desserts-label">desserts</div>
-      </div>
+                <div id="freezer">
+                    <div class="container freezer-container">
+                        <div class="freezer-inside-back"></div>
+                        <div class="freezer-inside-left"></div>
+                        <div class="freezer-inside-right"></div>
+                             <p>
+                            <br>
+                        <div class="row row-freezer">
+                            <div class="freezer-shelf"></div>
 
+                                <!-- frozen -->
+                                <div id="frozenBtn" class="box frozen-box">
+                                    <div class="pic frozen-pic">
+                                        <div class="frozen-bag-body">
+                                            <div class="frozen-bag-top">
+                                                <div class="frozen-bag-zipper"></div>
+                                            </div>
+                                            <div class="chicken-leg">
+                                                <div class="bone"></div>
+                                                <div class="bone-end1"></div>
+                                                <div class="bone-end2"></div>
+                                                <div class="chicken"></div>
+                                            </div>
+                                        </div>
+                                        <div class="frozen-little-face">
+                                            <div class="left-eye"></div>
+                                            <div class="right-eye"></div>
+                                            <div class="happy-mouth"></div>
+                                        </div>
+                                    </div>
+                                    <div class="labels frozen-label">frozen</div>
+                                </div>
 
-        <!--       end row-freezer -->
-    </div>
-              <!--     end container-freezer -->
-          </div>
+                                <!-- heat-n-eat -->
+                                <div id="heatneatBtn" class="box heatneat-box">
+                                    <div class="pic heatneat-pic">
+                                        <div class="heatneat-box-top"></div>
+                                        <div class="heatneat-box-side"></div>
+                                        <div class="heatneat-box-face">
+                                            <div class="heatneat-text">foodlike</div>
+                                            <div class="heatneat-tray-bottom"></div>
+                                            <div class="heatneat-tray-top"></div>
+                                            <div class="foodlump1"></div>
+                                            <div class="foodlump2"></div>
+                                            <div class="meatlump-shadow"></div>
+                                            <div class="meatlump-body"></div>
+                                            <div class="meatlump-highlight"></div>
+                                        </div>
+                                        <div class="heatneat-little-face">
+                                            <div class="left-eye"></div>
+                                            <div class="right-eye"></div>
+                                            <div class="happy-mouth"></div>
+                                        </div>
+                                    </div>
+                                    <div class="labels heatneat-label">heat-n-eat</div>
+                                </div>
 
-        </div>
-
-
-          <div id="fridger">
-              <div class="container fridge-container">
-                  <div class="inside-fridge-back"></div>
-                  <div class="inside-fridge-left"></div>
-                  <div class="inside-fridge-right"></div>
-                  <br>
-                  <div class="row row-one">
-                      <div class="row-one-shelf"></div>
-                      <div class="shelf-edge-one"></div>
-
-                        <!-- meat -->
-                        <div  id="meatBtn" class="box meat-box">
-                          <div class="pic meat-pic">
-                            <!--       content -->
+                                <!-- desserts -->
+                                <div id="dessertsBtn" class="box desserts-box">
+                                    <div class="pic desserts-pic">
+                                        <div class="cone-bottom"></div>
+                                        <div class="cone-body"></div>
+                                        <div class="cone-top-edge"></div>
+                                        <div class="cone-rim"></div>
+                                        <div class="ice-cream-bottom"></div>
+                                        <div class="ice-cream-top"></div>
+                                        <div class="desserts-little-face">
+                                            <div class="left-eye"></div>
+                                            <div class="right-eye"></div>
+                                            <div class="happy-mouth"></div>
+                                      </div>
+                                    </div>
+                                  <div class="labels desserts-label">desserts</div>
+                              </div>
                         </div>
-                          <div class="labels meat-label">meat</div>
-                      </div>
+                    </div>
+                </div>
+                <div id="fridger">
+                    <div class="container fridge-container">
+                        <div class="inside-fridge-back"></div>
+                        <div class="inside-fridge-left"></div>
+                        <div class="inside-fridge-right"></div>
+                        <br>
+                        <div class="row row-one">
+                            <div class="row-one-shelf"></div>
+                            <div class="shelf-edge-one"></div>
+                            <!-- meat -->
+                            <div  id="meatBtn" class="box meat-box">
+                                <div class="pic meat-pic">
+                                    <!--       content -->
+                                </div>
+                                <div class="labels meat-label">meat</div>
+                            </div>
 
-                        <!-- seafood -->
-                        <div id="seafoodBtn" class="box seafood-box">
-                          <div class="pic seafood-pic">
-                            <!--       content -->
+                            <!-- seafood -->
+                            <div id="seafoodBtn" class="box seafood-box">
+                                <div class="pic seafood-pic">
+                                    <!--       content -->
+                                </div>
+                                <div class="labels seafood-label">seafood</div>
+                            </div>
+
+                            <!-- dairy -->
+                            <div id="dairyBtn" class="box dairy-box">
+                                <div class="pic dairy-pic">
+                                    <div class="cheese-side"></div>
+                                    <div class="cheese-top"></div>
+                                    <div cLass="cheese-back"></div>
+                                    <div class="dairy-little-face">
+                                        <div class="left-eye"></div>
+                                        <div class="right-eye"></div>
+                                        <div class="happy-mouth"></div>
+                                    </div>
+                                </div>
+                                <div class="labels dairy-label">dairy</div>
+                            </div>
                         </div>
-                          <div class="labels seafood-label">seafood</div>
-                      </div>
+                        <p>
 
-                        <!-- dairy -->
-                        <div id="dairyBtn" class="box dairy-box">
-                          <div class="pic dairy-pic">
-                            <div class="cheese-side"></div>
-                            <div class="cheese-top"></div>
-                            <div class="cheese-back"></div>
-                            <div class="dairy-little-face">
-                              <div class="left-eye"></div>
-                              <div class="right-eye"></div>
-                              <div class="happy-mouth"></div>
-                              <!--         <div class="sad-mouth"></div> -->
-                          </div>
+                        <div class="row row-two">
+                            <div class="row-two-shelf"></div>
+                            <div class="shelf-edge-two"></div>
+
+                            <!-- veg -->
+                            <div id="vegBtn" class="box veg-box">
+                                <div class="pic veg-pic">
+                                    <div class="broc-left-leg"></div>
+                                    <div class="broc-middle-leg"></div>
+                                    <div class="broc-right-leg"></div>
+                                    <div class="broc-puff-back"></div>
+                                    <div class="broc-puff-left"></div>
+                                    <div class="broc-puff-right"></div>
+                                    <div class="broc-puff-front-left"></div>
+                                    <div class="broc-puff-front-right"></div>
+                                    <div class="broc-little-face">
+                                        <div class="left-eye"></div>
+                                        <div class="right-eye"></div>
+                                        <div class="happy-mouth"></div>
+                                    </div>
+                                </div>
+                                <div class="labels veg-label">veg</div>
+                            </div>
+
+                            <!-- fruit -->
+                            <div id="fruitBtn" class="box fruit-box">
+                                <div class="pic fruit-pic">
+                                    <!--       content -->
+                                </div>
+                                <div class="labels fruit-label">fruit</div>
+                            </div>
+
+                            <!-- leftovers -->
+                            <div id="leftoversBtn" class="box leftovers-box">
+                                <div class="pic leftovers-pic">
+                                    <!--       content -->
+                                </div>
+                                <div class="labels leftovers-label">leftovers</div>
+                            </div>
                         </div>
-                          <div class="labels dairy-label">dairy</div>
-                      </div>
+                        <p>
+                        <div class="row row-three">
+                            <div class="row-three-shelf"></div>
+                            <!-- alcohol -->
+                            <div id="alcoholBtn" class="box alcohol-box">
+                                <div class="pic alcohol-pic">
+                                    <div class="bottle-cork"></div>
+                                    <div class="bottle-top"></div>
+                                    <div class="bottle-curve"></div>
+                                    <div class="bottle-body">
+                                        <div class="wine-top"></div>
+                                        <div class="wine-body"></div>
+                                        <div class="bottle-label-shadow">
+                                            <div class="bottle-label"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bottle-bottom">
+                                        <div class="wine-bottom"></div>
+                                    </div>
+                                    <div class="alcohol-little-face">
+                                        <div class="left-eye"></div>
+                                        <div class="right-eye"></div>
+                                        <div class="happy-mouth"></div>
+                                    </div>
+                                </div>
+                                <div class="labels alcohol-label">alcohol</div>
+                            </div>
 
-            <!--       end row-one -->
-                </div>
+                            <!-- non-edible -->
+                            <div id="nonedibleBtn" class="box nonedible-box">
+                                <div class="pic nonedible-pic">
+                                    <div class="can-lid">
+                                        <div class="can-lid-circle"></div>
+                                    </div>
+                                    <div class="can-top"></div>
+                                    <div class="can-body">
+                                        <div class="cat-label-top"></div>
+                                        <div class="cat-label">
+                                            <div class="can-text">cat</div>
+                                            <div class="little-cat-face"></div>
+                                            <div class="little-cat-ear1"></div>
+                                            <div class="little-cat-ear2"></div>
+                                            <div class="cat-label-bottom"></div>
+                                        </div>
+                                    </div>
+                                    <div class="can-bottom"></div>
+                                    <div class="nonedible-little-face">
+                                        <div class="left-eye"></div>
+                                        <div class="right-eye"></div>
+                                        <div class="happy-mouth"></div>
+                                    </div>
+                                </div>
+                                <div class="labels nonedible-label">non-edible</div>
+                            </div>
 
-            <p>
-
-            <div id="vegBtn" class="row row-two">
-              <div class="row-two-shelf"></div>
-              <div class="shelf-edge-two"></div>
-
-
-            <!-- veg -->
-            <div id="vegBtn" class="box veg-box">
-            <div class="pic veg-pic">
-            <div class="broc-left-leg"></div>
-            <div class="broc-middle-leg"></div>
-            <div class="broc-right-leg"></div>
-            <div class="broc-puff-back"></div>
-            <div class="broc-puff-left"></div>
-            <div class="broc-puff-right"></div>
-            <div class="broc-puff-front-left"></div>
-            <div class="broc-puff-front-right"></div>
-            <div class="broc-little-face">
-              <div class="left-eye"></div>
-              <div class="right-eye"></div>
-              <div class="happy-mouth"></div>
-              <!--         <div class="sad-mouth"></div> -->
-          </div>
-        </div>
-          <div class="labels veg-label">veg</div>
-      </div>
-
-            <!-- fruit -->
-            <div id="fruitBtn" class="box fruit-box">
-          <div class="pic fruit-pic">
-            <!--       content -->
-        </div>
-          <div class="labels fruit-label">fruit</div>
-      </div>
-
-            <!-- fruit -->
-            <div id="leftoversBtn" class="box leftovers-box">
-          <div class="pic leftovers-pic">
-            <!--       content -->
-        </div>
-          <div class="labels leftovers-label">leftovers</div>
-      </div>
-
-            <!--     end row-two -->
-        </div>
-
-            <p>
-
-            <div class="row row-three">
-                  <div class="row-three-shelf"></div>
-
-            <!-- alcohol -->
-            <div id="alcoholBtn" class="box alcohol-box">
-          <div class="pic alcohol-pic">
-            <div class="bottle-cork"></div>
-            <div class="bottle-top"></div>
-            <div class="bottle-curve"></div>
-            <div class="bottle-body">
-              <div class="wine-top"></div>
-              <div class="wine-body"></div>
-              <div class="bottle-label-shadow">
-                <div class="bottle-label"></div>
-            </div>
-          </div>
-            <div class="bottle-bottom">
-              <div class="wine-bottom"></div>
-          </div>
-            <div class="alcohol-little-face">
-              <div class="left-eye"></div>
-              <div class="right-eye"></div>
-              <div class="happy-mouth"></div>
-              <!--         <div class="sad-mouth"></div> -->
-          </div>
-        </div>
-          <div class="labels alcohol-label">alcohol</div>
-      </div>
-
-            <!-- non-edible -->
-            <div id="nonedibleBtn" class="box nonedible-box">
-          <div class="pic nonedible-pic">
-            <div class="can-lid">
-          <div class="can-lid-circle"></div>
-        </div>
-        <div class="can-top"></div>
-        <div class="can-body">
-          <div class="cat-label-top"></div>
-          <div class="cat-label">
-            <div class="can-text">cat</div>
-            <div class="little-cat-face"></div>
-            <div class="little-cat-ear1"></div>
-            <div class="little-cat-ear2"></div>
-            <div class="cat-label-bottom"></div>
-          </div>
-        </div>
-        <div class="can-bottom"></div>
-          <div class="nonedible-little-face">
-          <div class="left-eye"></div>
-          <div class="right-eye"></div>
-          <div class="happy-mouth"></div>
-          <!--         <div class="sad-mouth"></div> -->
-        </div>
-        </div>
-          <div class="labels nonedible-label">non-edible</div>
-      </div>
-
-            <!-- other -->
-            <div id="otherBtn" class="box other-box">
-          <div class="pic other-pic">
-            <!--       content -->
-        </div>
-          <div class="labels other-label">other</div>
-      </div>
-            <!--       end row-three -->
-        </div>
-            <!--       end fridge-containter -->
-              </div>
-          </div>
-
-
-          <div id="fridge-back"></div>
-          <div id="fridger-door">
-            <div class="door-container">
-              <div class="row door-row-one">
-        <!-- condiments -->
-        <div id="condimentsBtn" class="box condiments-box">
-          <div class="pic condiments-pic">
-            <!--       content -->
-        </div>
-          <div class="labels condiments-label">condiments</div>
-      </div>
-    </div>
-
-              <br><br>
-
-              <div class="row door-row-two">
-        <!-- sauces -->
-        <div id="saucesBtn" class="box sauces-box">
-          <div class="pic sauces-pic">
-            <!--       content -->
-        </div>
-          <div class="labels sauces-label">sauces</div>
-      </div>
-
-    </div>
-
-              <br><br>
-
-              <div class="row door-row-three">
-        <!-- beverages -->
-        <div id="beveragesBtn" class="box beverages-box">
-          <div class="pic beverages-pic">
-            <div class="oj-cap"></div>
-        <div class="oj-bottle-top"></div>
-        <div class="oj-bottle-curve"></div>
-        <div class="oj-bottle">
-          <div class="oj-label">
-            <div class="oj-label-orange"></div>
-            <div class="oj-label-leaf"></div>
-            <div class="oj-label-stem"></div>
-          </div>
-        </div>
-        <div class="beverages-little-face">
-          <div class="left-eye"></div>
-          <div class="right-eye"></div>
-          <div class="happy-mouth"></div>
-          <!--         <div class="sad-mouth"></div> -->
-        </div>
-        </div>
-          <div class="labels beverages-label">beverages</div>
-      </div>
-        <!--      end door row three -->
-    </div>
-              <!--     end door container -->
-          </div>
-        </div>
-          <div id="fridger-handle-inner"></div>
-          <div id="fridger-handle-outer"></div>
-          <div id="freezer-door"></div>
-          <div id="freezer-handle-inner"></div>
-          <div id="freezer-handle-outer"></div>
-          <div id="fridger-hinge"></div>
-          <div id="freezer-hinge"></div>
-          </div>
-
-<!--       notice board -->
-
-        <div id="notice-board">
-          <div id="board-border">
-            <div id="board-content">
-
-              <div class="fridge-list" id="fridgeListBtn">
-                <div id="fridge-list-label" class="fridge-list list-label">
-                  <div class="label-text">fridge</div>
-                  <div class="label-text">list</div>
-                </div>
-                <div id="fridge-list-body" class="fridge-list">
-                  <div class="list-pic">
-                    <div class="list-pic-text">
-                      * ...<br>
-                      * ...<br>
-                      * ...<br>
-                      * ...<br>
-                      * ...
+                            <!-- other -->
+                            <div id="otherBtn" class="box other-box">
+                                <div class="pic other-pic">
+                                    <!--       content -->
+                                </div>
+                                <div class="labels other-label">other</div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-
-              <div class="tossed-list" id="tossedListBtn">
-                <div id="tossed-list-label" class="tossed-list list-label">
-                  <div class="label-text">tossed</div>
-                  <div class="label-text">list</div>
-                </div>
-                <div id="tossed-list-body" class="tossed-list">
-                  <div class="list-pic">
-                    <div class="list-pic-text">
-                      * ...<br>
-                      * ...<br>
-                      * ...<br>
-                      * ...<br>
-                      * ...
+                <div id="fridge-back"></div>
+                <div id="fridger-door">
+                    <div class="door-container">
+                        <div class="row door-row-one">
+                            <!-- condiments -->
+                            <div id="condimentsBtn" class="box condiments-box">
+                                <div class="pic condiments-pic">
+                                <!--       content -->
+                                </div>
+                                <div class="labels condiments-label">condiments</div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row door-row-two">
+                            <!-- sauces -->
+                            <div id="saucesBtn" class="box sauces-box">
+                                 <div class="pic sauces-pic">
+                                <!--       content -->
+                                </div>
+                                <div class="labels sauces-label">sauces</div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row door-row-three">
+                            <!-- beverages -->
+                            <div id="beveragesBtn" class="box beverages-box">
+                                <div class="pic beverages-pic">
+                                    <div class="oj-cap"></div>
+                                    <div class="oj-bottle-top"></div>
+                                    <div class="oj-bottle-curve"></div>
+                                    <div class="oj-bottle">
+                                        <div class="oj-label">
+                                            <div class="oj-label-orange"></div>
+                                            <div class="oj-label-leaf"></div>
+                                            <div class="oj-label-stem"></div>
+                                        </div>
+                                    </div>
+                                    <div class="beverages-little-face">
+                                        <div class="left-eye"></div>
+                                        <div class="right-eye"></div>
+                                        <div class="happy-mouth"></div>
+                                    </div>
+                                </div>
+                                <div class="labels beverages-label">beverages</div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+                <div id="fridger-handle-inner"></div>
+                <div id="fridger-handle-outer"></div>
+                <div id="freezer-door"></div>
+                <div id="freezer-handle-inner"></div>
+                <div id="freezer-handle-outer"></div>
+                <div id="fridger-hinge"></div>
+                <div id="freezer-hinge"></div>
+            </div>
 
-              <div class="shopping-list" id="shoppingListBtn">
-                <div id="shopping-list-label" class="shopping-list list-label">
-                  <div class="label-text">shopping</div>
-                  <div class="label-text">list</div>
-                </div>
-                <div id="shopping-list-body" class="shopping-list">
-                  <div class="list-pic">
-                    <div class="list-pic-text">
-                      * ...<br>
-                      * ...<br>
-                      * ...<br>
-                      * ...<br>
-                      * ...
+            <div id="notice-board">
+                <div id="board-border">
+                    <div id="board-content">
+
+                        <div class="fridge-list" id="fridgeListBtn">
+                            <div id="fridge-list-label" class="fridge-list list-label">
+                                <div class="label-text">fridge</div>
+                                <div class="label-text">list</div>
+                            </div>
+                            <div id="fridge-list-body" class="fridge-list">
+                                <div class="list-pic">
+                                    <div class="list-pic-text">
+                                        * ...<br>
+                                        * ...<br>
+                                        * ...<br>
+                                        * ...<br>
+                                        * ...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tossed-list" id="tossedListBtn">
+                            <div id="tossed-list-label" class="tossed-list list-label">
+                                <div class="label-text">tossed</div>
+                                <div class="label-text">list</div>
+                                </div>
+                                <div id="tossed-list-body" class="tossed-list">
+                                    <div class="list-pic">
+                                        <div class="list-pic-text">
+                                            * ...<br>
+                                            * ...<br>
+                                            * ...<br>
+                                            * ...<br>
+                                            * ...
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="shopping-list" id="shoppingListBtn">
+                            <div id="shopping-list-label" class="shopping-list list-label">
+                                <div class="label-text">shopping</div>
+                                <div class="label-text">list</div>
+                            </div>
+                            <div id="shopping-list-body" class="shopping-list">
+                                <div class="list-pic">
+                                    <div class="list-pic-text">
+                                        * ...<br>
+                                        * ...<br>
+                                        * ...<br>
+                                        * ...<br>
+                                          * ...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-
-  <!-- end notice board -->
-
-
-{#    shopping bag / add item#}
-      <div class="bag">
-        <div class="bag-back"></div>
-        <div class="bag-front" id="addItemBtn">
-            <div class="bag-arrow"></div>
-            <div class="bag-text">&nbsp;add items</div>
-        </div>
-        <div class="bag-side"></div>
-        <div class="bag-inside"></div>
-      </div>
-
-
-        <div id="frozenModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Frozen<br>
-                <p>{% for f in frozen %}
-                   <div class="item-detail">
-                       <span class="item-detail-titles">Name:</span> <span class="item-detail-values">{{ f.name }}</span>
-                            <br>
-                        <span class="item-detail-titles">Quantity:</span> {{ f.quantity }}
-                            <br>
-                        <span class="item-detail-titles">Calories:</span> {{ f.calories }}
-                            <br>
-                       <span class="item-detail-titles"> Purchased:</span> {{ f.date_added }}
-                            <br>
-                        <span class="item-detail-titles">Expires:</span> {{ f.expires }}
-                            <br>
-                        <span class="item-detail-titles">Intended Use:</span> {{ f.intended_use }}
-
-
-                        <form action="" method="get">
-                                <button class = "btn btn-default" name="DeleteButton" value="{{ f.id }}">Used!</button>
-                        </form>
-
-
-
-
-
-
-                   </div><br>
-                   {% endfor %}
             </div>
 
-        </div>
-        <div id="heatneatModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Heat-N-Eat<br>
-                    {% for h in heatneat %}
-                    <div class="item-detail">
-                   {{ h.name }}<br>
-                   <ul><li>{{ h.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
+            <div class="bag">
+                <div class="bag-back"></div>
+                <div class="bag-front" id="addItemBtn">
+                    <div class="bag-arrow"></div>
+                    <div class="bag-text">&nbsp;add items</div>
+                </div>
+                <div class="bag-side"></div>
+                <div class="bag-inside"></div>
             </div>
-        </div>
-        <div id="dessertsModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Desserts<br>
-                {% for d in desserts %}
-                    <div class="item-detail">
-                   {{ d.name }}<br>
-                   <ul><li>{{ d.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="meatModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Meat<br>
-                {% for m in meat %}
-                    <div class="item-detail">
-                   {{ m.name }}<br>
-                   <ul><li>{{ m.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="seafoodModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Seafood<br>
-                {% for s in seafood %}
-                    <div class="item-detail">
-                   {{ s.name }}<br>
-                   <ul><li>{{ s.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="dairyModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Dairy<br>
-                {% for da in dairy %}
-                    <div class="item-detail">
-                   {{ da.name }}<br>
-                   <ul><li>{{ da.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="vegModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Veg<br>
-                {% for v in veg %}
-                    <div class="item-detail">
-                   {{ v.name }}<br>
-                   <ul><li>{{ v.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="fruitModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Fruit<br>
-                {% for fru in fruit %}
-                    <div class="item-detail">
-                   {{ fru.name }}<br>
-                   <ul><li>{{ fru.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="leftoversModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Leftovers<br>
-                {% for l in leftovers %}
-                    <div class="item-detail">
-                   {{ l.name }}<br>
-                   <ul><li>{{ l.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="alcoholModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Alcohol<br>
-                {% for a in alcohol %}
-                    <div class="item-detail">
-                   {{ a.name }}<br>
-                   <ul><li>{{ a.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="nonedibleModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Non-edible<br>
-                {% for n in nonedible %}
-                    <div class="item-detail">
-                   {{ n.name }}<br>
-                   <ul><li>{{ n.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="otherModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Other<br>
-                {% for o in other %}
-                    <div class="item-detail">
-                   {{ o.name }}<br>
-                   <ul><li>{{ o.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="condimentsModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Condiments<br>
-                {% for c in condiments %}
-                    <div class="item-detail">
-                   {{ c.name }}<br>
-                   <ul><li>{{ c.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="saucesModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Sauces<br>
-                {% for sa in sauces %}
-                    <div class="item-detail">
-                   {{ sa.name }}<br>
-                   <ul><li>{{ sa.intended_use }}</li></ul>
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
-        <div id="beveragesModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="category-title">Beverages<br>
-                {% for b in beverages %}
-                    <div class="item-detail">
-                   <form action="" method="get">
-                                <button class = "btn btn-default" name="DeleteButton" value="{{ b.id }}">&times;</button>
-                        </form>{{ b.name }}
-                    </div><br>
-                   {% endfor %}
-            </div>
-        </div>
 
-        <div id="fridgeListModal" class="fridge-list-modal">
-            <div class="modal-content item-detail">
-                <span class="close">&times;</span>
-                <h3>fridge list</h3>
-                <p class="category-title">Meat<br>
-                    {% for m in meat %}
-                        <ul>
-                            <li>{{ m.name }} ({{ m.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Seafood<br>
-                    {% for s in seafood %}
-                        <ul>
-                            <li>{{ s.name }} ({{ s.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Dairy<br>
-                    {% for d in dairy %}
-                        <ul>
-                            <li>{{ d.name }} ({{ d.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Veg<br>
-                    {% for v in veg %}
-                        <ul>
-                            <li>{{ v.name }} ({{ v.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Fruit<br>
-                    {% for f in fruit %}
-                        <ul>
-                            <li>{{ f.name }} ({{ f.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Leftovers<br>
-                    {% for l in leftovers %}
-                        <ul>
-                            <li>{{ l.name }} ({{ l.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Alcohol<br>
-                    {% for a in alcohol %}
-                        <ul>
-                            <li>{{ a.name }} ({{ a.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Non-Edible<br>
-                    {% for n in nonedible %}
-                        <ul>
-                            <li>{{ n.name }} ({{ n.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Other<br>
-                    {% for u in unknown %}
-                        <ul>
-                            <li>{{ u.name }} ({{ u.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Condiments<br>
-                    {% for c in condiments %}
-                        <ul>
-                            <li>{{ c.name }} ({{ c.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Sauces<br>
-                    {% for sa in sauces %}
-                        <ul>
-                            <li>{{ sa.name }} ({{ sa.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Beverages<br>
-                    {% for b in beverages %}
-                        <ul>
-                            <li>{{ b.name }} ({{ b.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Frozen<br>
-                    {% for fr in frozen %}
-                        <ul>
-                            <li>{{ fr.name }} ({{ fr.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Heat-n-Eat<br>
-                    {% for h in heatneat %}
-                        <ul>
-                            <li>{{ h.name }} ({{ h.quantity }})</li>
-                        </ul>
-                    {% endfor %}
-                <p class="category-title">Desserts<br>
-                    {% for de in desserts %}
-                        {% if de.tossed == False %}
+            <div id="modal-container">
+                <div id="frozenModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Frozen</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for f in frozen %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ f.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ f.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ f.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ f.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ f.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ f.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ f.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ f.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="heatneatModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Heat-n-Eat</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for h in heatneat %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ h.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ h.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ h.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ h.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ h.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ h.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ h.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ h.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="dessertsModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Desserts</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for de in desserts %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ de.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ de.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ de.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ de.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ de.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ de.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ de.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ de.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="meatModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Meat</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for m in meat %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ m.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ m.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ m.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ m.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ m.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ m.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ m.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ m.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="seafoodModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Seafood</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for s in seafood %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ s.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ s.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ s.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ s.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ s.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ s.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ s.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ s.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="dairyModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Dairy</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for da in dairy %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ da.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ da.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ da.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ da.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ da.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ da.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ da.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ da.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="vegModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Veg</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for v in veg %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ v.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ v.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ v.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ v.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ v.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ v.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ v.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ v.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="fruitModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Fruit</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for f in fruit %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ f.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ f.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ f.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ f.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ f.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ f.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ f.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ f.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="leftoversModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Leftovers</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for l in leftovers %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ l.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ l.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ l.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ l.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ l.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ l.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ l.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ l.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="alcoholModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Alcohol</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for a in alcohol %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ a.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ a.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ a.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ a.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ a.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ a.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ a.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ a.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="nonedibleModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Non-edible</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for n in nonedible %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ n.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ n.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ n.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ n.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ n.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ n.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ n.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ n.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="otherModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Other</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for o in other %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ o.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ o.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ o.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ o.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ o.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ o.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ o.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ o.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="condimentsModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Condiments</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for c in condiments %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ c.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ c.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ c.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ c.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ c.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ c.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ c.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ c.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="saucesModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Sauces</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for sa in sauces %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ sa.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ sa.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ sa.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ sa.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ sa.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ sa.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ sa.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ sa.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+                <div id="beveragesModal" class="modal">
+                    <div class="large-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Beverages</h3>
+                    </div>
+                    <div class="large-modal-content">
+                        <p>
+                        {% for b in beverages %}
+                            <div class="item-detail">
+                                <table cellpadding="3px">
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Name:</span></td>
+                                        <td><span class="item-detail-values">{{ b.name }}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Quantity:</span></td>
+                                        <td>{{ b.quantity }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles"> Purchased:</span></td>
+                                        <td>{{ b.date_added }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Expires:</span></td>
+                                        <td>{{ b.expires }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Calories:</span></td>
+                                        <td>{{ b.calories }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right-align"><span class="item-detail-titles">Intended Use:</span></td>
+                                        <td>{{ b.intended_use }}</td>
+                                    </tr>
+                                </table>
+                                <form action="" method="">
+                                    <button class="btn tossed" name="TossedButton" value="{{ b.id }}">Tossed</button>
+                                </form>
+                                <form action="" method="get">
+                                    <button class="btn used" name="DeleteButton" value="{{ b.id }}">Used</button>
+                                </form>
+
+                                <hr>
+                            </div>
+                        {% endfor %}
+                     </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div id="fridgeListModal" class="fridge-list-modal">
+                    <div class="small-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Fridge List</h3>
+                    </div>
+                    <div class="small-modal-content item-detail">
+                        <p class="category-title">Meat<br>
+                            {% for m in meat %}
+                                <ul>
+                                    <li>{{ m.name }} ({{ m.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Seafood<br>
+                            {% for s in seafood %}
+                                <ul>
+                                    <li>{{ s.name }} ({{ s.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Dairy<br>
+                            {% for d in dairy %}
+                                <ul>
+                                    <li>{{ d.name }} ({{ d.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Veg<br>
+                            {% for v in veg %}
+                                <ul>
+                                    <li>{{ v.name }} ({{ v.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Fruit<br>
+                            {% for f in fruit %}
+                                <ul>
+                                    <li>{{ f.name }} ({{ f.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Leftovers<br>
+                            {% for l in leftovers %}
+                                <ul>
+                                    <li>{{ l.name }} ({{ l.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Alcohol<br>
+                            {% for a in alcohol %}
+                                <ul>
+                                    <li>{{ a.name }} ({{ a.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Non-Edible<br>
+                            {% for n in nonedible %}
+                                <ul>
+                                    <li>{{ n.name }} ({{ n.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Other<br>
+                            {% for u in unknown %}
+                                <ul>
+                                    <li>{{ u.name }} ({{ u.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Condiments<br>
+                            {% for c in condiments %}
+                                <ul>
+                                    <li>{{ c.name }} ({{ c.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Sauces<br>
+                            {% for sa in sauces %}
+                                <ul>
+                                    <li>{{ sa.name }} ({{ sa.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Beverages<br>
+                            {% for b in beverages %}
+                                <ul>
+                                    <li>{{ b.name }} ({{ b.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Frozen<br>
+                            {% for fr in frozen %}
+                                <ul>
+                                    <li>{{ fr.name }} ({{ fr.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Heat-n-Eat<br>
+                            {% for h in heatneat %}
+                                <ul>
+                                    <li>{{ h.name }} ({{ h.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                        <p class="category-title">Desserts<br>
+                            {% for de in desserts %}
+                                <ul>
+                                    <li>{{ de.name }} ({{ de.quantity }})</li>
+                                </ul>
+                            {% endfor %}
+                    </div>
+                </div>
+                <div id="tossedListModal" class="tossed-list-modal">
+                    <div class="small-modal-header modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Tossed List</h3>
+                    </div>
+                    <div class="small-modal-content item-detail">
+                        {% for t in tossed %}
+                            {{ t.category }}: {{ t.name }}
                             <ul>
-                                <li>{{ de.name }} ({{ de.quantity }})</li>
+                                <li>{{ t.date_added }}</li>
                             </ul>
-                        {% endif %}
-                    {% endfor %}
-
-
-
+                        {% endfor %}
+                    </div>
+                </div>
+                <div id="shoppingListModal" class="shopping-list-modal">
+                    <div class="small-modal-header">
+                        <span class="close">&times;</span>
+                        <h3>Shopping List</h3>
+                    </div>
+                    <div class="small-modal-content item-detail">
+                        <form name="shopForm" method="post">
+                            <button type="submit" class="btn shop-add" name="shopButton">Add!</button>
+                            {% csrf_token %}
+                            {{ shop_form.as_p}}
+                         </form>
+                        <hr>
+                        <p>
+                        {% for item in shop_item %}
+                            <form name="shopDeleteForm" action="" method="get">
+                                <button class = "btn shop-delete" name="ShopDeleteButton" value="{{ item.id }}">&times;</button>
+                            </form>
+                            {{ item.name }}
+                            <p>
+                        {%  endfor %}
+                    </div>
+                </div>
+                <div id="addItemModal" class="add-item-modal">
+                    <div class="add-modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Add Item</h3>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ add_form.as_p }}
+                            <button type="submit" class="btn btn-default" name="addButton">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="tossedListModal" class="tossed-list-modal">
-            <div class="modal-content item-detail">
-                <span class="close">&times;</span>
-                tossed<br>
-                {% for t in tossed %}
-                    <ul>
-                        <li>{{ t.category }}: {{ t.name }}
-                            <ul><li>{{ t.date_added }}</li></ul>
-                        </li>
-                    </ul>
-                {% endfor %}
-            </div>
-        </div>
-        <div id="shoppingListModal" class="shopping-list-modal">
-            <div class="modal-content item-detail">
-                <span class="close">&times;</span>
-                shopping<br>
-                {% for item in shop_item %}
-                    <ul>
-                        <li>{{ item.name }}
-                        <form name="shopDeleteForm" action="" method="get">
-                                <button class = "btn btn-default" name="ShopDeleteButton" value="{{ item.id }}">&times;</button>
-                        </form></li>
-                    </ul>
-                {%  endfor %}
-
-                    <form name="shopForm" method="post">
-                        {% csrf_token %}
-                        {{ shop_form.as_p}}
-                        <button type="submit" class="btn btn-default" name="shopButton">Add!</button>
-                    </form>
-            </div>
-        </div>
-
-        <div id="addItemModal" class="add-item-modal">
-            <div class="add-modal-content">
-                <span class="close">&times;</span>
-                add item<br>
-                    <form method="post">
-                    {% csrf_token %}
-                    {{ add_form.as_p }}
-                    <button type="submit" class="btn btn-default" name="addButton">Submit</button>
-                    </form>
-            </div>
-        </div>
-
     </div>
-  </div>
-
-
 <script src="{% static 'pages/js/main.js' %}"></script>
 </body>
 </html>
