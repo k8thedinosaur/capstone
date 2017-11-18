@@ -31,3 +31,24 @@ how to aggregate time (count between date_added and expires) and/or make action 
 
 possible answers to time problem:
 	get seconds of expiry date and added date, write function to subtract them, add this output as another variable to be operated on
+
+
+to do:
+
+find new font
+~make small modals taller (match height of large)~
+~style add item~
+style scrollbars, x's, buttons
+tossed category text bold
+change date display format
+
+draw inside of fridge door
+
+make all the dumb little pictures \0/ /0\
+
+
+
+bonus:
+make icons move on hover
+style forms
+draw something behind shopping list

@@ -33,6 +33,11 @@ def home(request):
 
     if request.GET.get('TossedButton'):
         Item.objects.filter(id=request.GET.get('TossedButton')).update(tossed=True)
+        return redirect('/')
+
+    if 'TossedClearButton' in request.POST:
+        tossed.delete()
+        return redirect('/')
 
     if 'addButton' in request.POST:
         add_form = ItemForm(request.POST)

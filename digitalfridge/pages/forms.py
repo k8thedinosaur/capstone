@@ -30,3 +30,9 @@ class TossedForm(forms.ModelForm):
     class Meta:
         model = Item
         fields = ['tossed']
+
+
+class TossedClearForm(forms.ModelForm):
+    class Meta:
+        model = Item
+        fields = []

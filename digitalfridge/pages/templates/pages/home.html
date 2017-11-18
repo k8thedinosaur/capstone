@@ -94,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="fridger">
+                <div id="fridge">
                     <div class="container fridge-container">
                         <div class="inside-fridge-back"></div>
                         <div class="inside-fridge-left"></div>
@@ -134,8 +134,7 @@
                                 <div class="labels dairy-label">dairy</div>
                             </div>
                         </div>
-                        <p>
-
+                        <p></p>
                         <div class="row row-two">
                             <div class="row-two-shelf"></div>
                             <div class="shelf-edge-two"></div>
@@ -163,7 +162,20 @@
                             <!-- fruit -->
                             <div id="fruitBtn" class="box fruit-box">
                                 <div class="pic fruit-pic">
-                                    <!--       content -->
+                                    <div class="apple-body">
+                                        <div class="apple1"></div>
+                                            <div class="apple2"></div>
+                                            <div class="apple3"></div>
+                                            <div class="apple-top"></div>
+                                            <div class="apple-filler"></div>
+                                        </div>
+                                        <div class="apple-stem"></div>
+                                        <div class="apple-leaf"></div>
+                                        <div class="fruit-little-face">
+                                            <div class="left-eye"></div>
+                                            <div class="right-eye"></div>
+                                            <div class="happy-mouth"></div>
+                                        </div>
                                 </div>
                                 <div class="labels fruit-label">fruit</div>
                             </div>
@@ -171,12 +183,24 @@
                             <!-- leftovers -->
                             <div id="leftoversBtn" class="box leftovers-box">
                                 <div class="pic leftovers-pic">
-                                    <!--       content -->
+                                    <div class="leftovers-body">
+                                        <div class="meat mystery-meat1"></div>
+                                        <div class="meat mystery-meat2"></div>
+                                        <div class="meat mystery-meat3"></div>
+                                    </div>
+                                    <div class="leftovers-lid">
+                                        <div class="leftovers-lid-highlight"></div>
+                                    </div>
+                                    <div class="leftovers-little-face">
+                                        <div class="left-eye"></div>
+                                        <div class="right-eye"></div>
+                                        <div class="happy-mouth"></div>
+                                    </div>
                                 </div>
                                 <div class="labels leftovers-label">leftovers</div>
                             </div>
                         </div>
-                        <p>
+                        <p></p>
                         <div class="row row-three">
                             <div class="row-three-shelf"></div>
                             <!-- alcohol -->
@@ -242,30 +266,49 @@
                     </div>
                 </div>
                 <div id="fridge-back"></div>
-                <div id="fridger-door">
+                <div id="fridge-door">
                     <div class="door-container">
+{#                        <br>#}
                         <div class="row door-row-one">
                             <!-- condiments -->
                             <div id="condimentsBtn" class="box condiments-box">
                                 <div class="pic condiments-pic">
-                                <!--       content -->
+                                    <div class="mustard-body">
+                                        <div class="mustard-label"></div>
+                                    </div>
+                                    <div class="mustard-top"></div>
+                                    <div class="mustard-tip"></div>
+                                    <div class="condiments-little-face">
+                                        <div class="left-eye"></div>
+                                        <div class="right-eye"></div>
+                                        <div class="happy-mouth"></div>
+                                    </div>
                                 </div>
                                 <div class="labels condiments-label">condiments</div>
                             </div>
                         </div>
                         <br>
-                        <br>
                         <div class="row door-row-two">
                             <!-- sauces -->
                             <div id="saucesBtn" class="box sauces-box">
-                                 <div class="pic sauces-pic">
-                                <!--       content -->
+                                <div class="pic sauces-pic">
+                                    <div class="sauce-body">
+                                        <div class="sauce-box">
+                                            <div class="sauce-label"></div>
+                                        </div>
+                                    </div>
+                                    <div class="sauce-lid"></div>
+                                    <div class="sauce-lid-top"></div>
+                                    <div class="sauces-little-face">
+                                        <div class="left-eye"></div>
+                                        <div class="right-eye"></div>
+                                        <div class="happy-mouth"></div>
+                                    </div>
                                 </div>
                                 <div class="labels sauces-label">sauces</div>
                             </div>
                         </div>
-                        <br>
-                        <br>
+                        <br><br>
                         <div class="row door-row-three">
                             <!-- beverages -->
                             <div id="beveragesBtn" class="box beverages-box">
@@ -291,12 +334,12 @@
                         </div>
                     </div>
                 </div>
-                <div id="fridger-handle-inner"></div>
-                <div id="fridger-handle-outer"></div>
+                <div id="fridge-handle-inner"></div>
+                <div id="fridge-handle-outer"></div>
                 <div id="freezer-door"></div>
                 <div id="freezer-handle-inner"></div>
                 <div id="freezer-handle-outer"></div>
-                <div id="fridger-hinge"></div>
+                <div id="fridge-hinge"></div>
                 <div id="freezer-hinge"></div>
             </div>
 
@@ -1077,18 +1120,6 @@
                      </div>
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
                 <div id="fridgeListModal" class="fridge-list-modal">
                     <div class="small-modal-header">
                         <span class="close">&times;</span>
@@ -1194,11 +1225,19 @@
                     </div>
                     <div class="small-modal-content item-detail">
                         {% for t in tossed %}
-                            {{ t.category }}: {{ t.name }}
+                        <p class="category-title">{{ t.date_added }}</p>
                             <ul>
-                                <li>{{ t.date_added }}</li>
+                                <li><span class="bold">{{ t.category }}:</span> {{ t.name }}</li>
                             </ul>
                         {% endfor %}
+                    </div>
+                    <div class="small-modal-footer">
+                        <p>
+                        <form name="TossedClearForm" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn tossed-clear-btn" name="TossedClearButton">Clear
+                                List</button>
+                         </form>
                     </div>
                 </div>
                 <div id="shoppingListModal" class="shopping-list-modal">
@@ -1207,6 +1246,7 @@
                         <span class="headers"><h3>Shopping List</h3></span>
                     </div>
                     <div class="shopping-list-content item-detail">
+                        <br>
                         {% for item in shop_item %}
                             <form name="shopDeleteForm" action="" method="get">
                                 <button class = "btn shop-delete" name="ShopDeleteButton" value="{{ item.id }}">&times;</button>
@@ -1215,23 +1255,25 @@
                             <p>
                         {%  endfor %}
                     </div>
-                    <div class="shopping-list-add">
+                    <div class="small-modal-footer">
                         <p>
                         <form name="shopForm" method="post">
-                            <button type="submit" class="btn shop-add" name="shopButton">Add!</button>
+                            <button type="submit" class="btn shop-add-btn" name="shopButton">Add</button>
                             {% csrf_token %}
                             {{ shop_form.as_p}}
                          </form>
                     </div>
                 </div>
                 <div id="addItemModal" class="add-item-modal">
-                    <div class="add-modal-content">
+                    <div class="add-modal-header">
                         <span class="close">&times;</span>
                         <h3>Add Item</h3>
+                    </div>
+                    <div class="add-modal-content">
                         <form method="post">
                             {% csrf_token %}
                             {{ add_form.as_p }}
-                            <button type="submit" class="btn btn-default" name="addButton">Submit</button>
+                            <button type="submit" class="btn add-btn" name="addButton">Add to Fridge</button>
                         </form>
                     </div>
                 </div>

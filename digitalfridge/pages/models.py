@@ -60,7 +60,7 @@ class Item(models.Model):
     date_added = models.DateField()
     expires = models.DateField()
     calories = models.IntegerField(blank=True, null=True)
-    intended_use = models.CharField(max_length=255, blank=True, null=True)
+    intended_use = models.CharField(max_length=100, blank=True, null=True)
     tossed = models.BooleanField(default=False)
 
     def __str__(self):
