@@ -253,6 +253,48 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   top: 83.5%;
 }
 
+.door-row-one-shelf {
+  position: absolute;
+  -webkit-clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(4.5% 0%, 95.5% 0%, 100% 100%, 0% 100%);
+  background: #eee;
+  z-index: -2;
+  height: 8%;
+  width: 94%;
+  top: 20%;
+}
+
+.door-row-two-shelf {
+  position: absolute;
+  clip-path: polygon(4.5% 0%, 95.5% 0%, 100% 100%, 0% 100%);
+  background: #eee;
+  z-index: -2;
+  height: 8%;
+  width: 94%;
+    top: 51%;
+}
+
+.door-row-three-shelf {
+  position: absolute;
+    clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+  background: #eee;
+  z-index: -2;
+  height: 8%;
+  width: 100%;
+  top: 86.5%;
+}
+
+.freezer-door-shelf {
+  position: absolute;
+    clip-path: polygon(7% 0%, 93% 0%, 100% 100%, 0% 100%);
+  background: #eee;
+  z-index: -2;
+  height: 16%;
+  width: 98%;
+    left: 1%;
+  top: 74%;
+}
+
 .shelf-edge-one {
   position: absolute;
   background: #f4f5f7;
@@ -268,6 +310,15 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   height: 5%;
   width: 94%;
   top: 61%;
+  z-index: -2
+}
+
+.door-shelf-edge-two {
+  position: absolute;
+  background: #f4f5f7;
+  height: 5%;
+  width: 94%;
+  top: 58.5%;
   z-index: -2
 }
 
@@ -298,6 +349,64 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   height: 95.5%;
   width: 10%;
   left: 89%;
+  z-index: -3;
+}
+
+.door-inside-back {
+  position: absolute;
+  background: #ddd;
+  border-radius:1%;
+  height: 90%;
+  width: 85%;
+  left: 7.5%;
+  z-index: -2;
+}
+
+.door-inside-left {
+  position: absolute;
+  background: #eaeaea;
+  border-radius:2%;
+  height: 93%;
+  width: 15%;
+  left: 1%;
+  z-index: -3;
+}
+.door-inside-right{
+  position: absolute;
+  background: #eaeaea;
+  border-radius:2%;
+  height: 93%;
+  width: 15%;
+  right: 1%;
+  z-index: -3;
+}
+
+.freezer-door-inside-back {
+  position: absolute;
+  background: #ddd;
+  border-radius:1%;
+  height: 90%;
+  width: 84%;
+  left: 8%;
+  z-index: -2;
+}
+
+.freezer-door-inside-left {
+  position: absolute;
+  background: #eaeaea;
+  border-radius:2%;
+  height: 90%;
+  width: 15%;
+  left: 1%;
+  z-index: -3;
+}
+.freezer-door-inside-right{
+  position: absolute;
+  background: #eaeaea;
+  border-radius:2%;
+  height: 90%;
+  width: 15%;
+  right: 1%;
   z-index: -3;
 }
 
@@ -348,10 +457,20 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     left: 1.5%;
 }
 
+.freezer-door-container {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  height: 84%;
+  width: 80%;
+  }
+
 .door-container {
-    position: absolute;
-    top: 9.5%;
-    left: 30%;
+  position: absolute;
+  top: 6%;
+  left: 10%;
+  height: 94%;
+  width: 80%;
 }
 
 .labels {
@@ -734,11 +853,142 @@ clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
     position: relative;
 }
 
+.meat-little-face {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  top: 65%;
+  left: 55%;
+  z-index: 5;
+}
+
+.ham-front {
+  position: absolute;
+  background: #c67f7f;
+  border: solid 3.5px #82281a;
+  border-radius: 42%;
+  height: 35%;
+  width: 52%;
+  top: 50%;
+  left: 31%;
+  z-index: 2;
+}
+
+.ham-body {
+  position: absolute;
+  background: #631e13;
+  border-radius: 50% 0 0 50%;
+  height: 40%;
+  width: 50%;
+  /*transform: skew(5deg);*/
+  top: 50%;
+  left: 15%;
+  z-index: 1;
+}
+
 
 /* seafood */
 .seafood-pic {
     position: relative;
 }
+
+
+.seafood-little-face {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  top: 35%;
+  left: 40%;
+  z-index: 5;
+}
+
+.crab-legs1 {
+  position: absolute;
+  background: transparent;
+  border: solid 5px #d64806;
+  border-top-left-radius: 65px;
+  border-top-right-radius: 65px;
+  border-bottom: none;
+  height: 10%;
+  width: 70%;
+  top: 71%;
+  left: 10%
+}
+
+.crab-legs2 {
+  position: absolute;
+  background: transparent;
+  border: solid 5px #d64806;
+  border-top-left-radius: 75px;
+  border-top-right-radius:75px;
+  border-bottom: none;
+  height: 8%;
+  width: 80%;
+  top: 62%;
+  left: 5%;
+}
+
+.crab-legs3 {
+  position: absolute;
+  background: transparent;
+  border: solid 5px #d64806;
+  border-top-left-radius: 65px;
+  border-top-right-radius: 65px;
+  border-bottom: none;
+  height: 6%;
+  width: 90%;
+  top: 55%;
+  left:1%;
+}
+
+.crab-legs4 {
+  position: absolute;
+  background: transparent;
+  border: solid 6px #d64806;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  border-top: none;
+  height: 24%;
+  width: 70%;
+  top: 25%;
+  left: 8%;
+
+}
+
+.crab-body {
+  position: absolute;
+  background: #d64806;
+  border-radius: 45%;
+  height: 50%;
+  width: 60%;
+  top: 33%;
+  left: 19%;
+}
+
+.crab-claw1 {
+  position: absolute;
+  width: 2%;
+	height:1%;
+	border: solid 14px;
+	border-color: #d64806 transparent #d64806 #d64806;
+	border-radius:50%;
+  transform: rotate(-60deg);
+  top: 5%;
+  left: 3%;
+}
+
+.crab-claw2 {
+  position: absolute;
+  width: 2%;
+	height:1%;
+	border: solid 14px;
+	border-color: #d64806 transparent #d64806 #d64806;
+	border-radius:50%;
+  transform: rotate(-120deg);
+  top: 5%;
+  right: 3%;
+}
+
 
 
 /* dairy */
@@ -908,17 +1158,17 @@ clip-path: polygon(30% 0, 0 100%, 100% 50%);
   position: absolute;
   height: 20%;
   width: 20%;
-  top: 54%;
+  top: 52%;
   left: 36%;
   z-index: 5;
 }
 
 .apple-body {
   position: absolute;
-  height: 55%;
-  width: 80%;
+  height: 49%;
+  width: 72%;
   top: 30%;
-  left: 10%;
+  left: 14%;
 }
 
 .apple1 {
@@ -971,9 +1221,9 @@ clip-path: polygon(30% 0, 0 100%, 100% 50%);
   background: #422910;
   transform: rotate(10deg);
   border-radius: 30%;
-  height: 25%;
-  width: 5%;
-  top: 14%;
+  height: 20%;
+  width: 4%;
+  top: 16%;
   left: 50%;
   z-index: 5;
 }
@@ -985,10 +1235,10 @@ clip-path: polygon(30% 0, 50% 15%, 80% 65%, 70% 100%, 35% 80%, 25% 25%);
   transform: rotate(150deg);
   background: #139625;
   border-radius: 50%;
-  height: 30%;
-  width: 40%;
-  top: 12%;
-  left: 16%;
+  height: 24%;
+  width: 32%;
+  top: 16%;
+  left: 23%;
   z-index: 4;
 }
 
@@ -1325,6 +1575,59 @@ clip-path: ellipse(50% 35% at 50% 50%);
     position: relative;
 }
 
+.unknown-little-face {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  top: 55%;
+  left: 30%;
+  z-index: 5;
+}
+
+.unknown-box-text {
+  position: absolute;
+  font-family: "Coustard";
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16pt;
+  color: #d80202;
+  height: 1%;
+  width: 1%;
+  left: 40%;
+    top: -8%;
+}
+
+.unknown-box-top {
+  position: absolute;
+  -webkit-clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+  background: #f9f9f9;
+  height: 20%;
+  width: 55%;
+  top: 35%;
+  left: 20%;
+}
+
+.unknown-box-front {
+  position: absolute;
+  background: #f9f9f9;
+  height: 28.75%;
+  width: 49.25%;
+  top: 55.5%;
+  left: 20%;
+}
+
+.unknown-box-side {
+  position: absolute;
+-webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
+  transform: rotate(90deg);
+  background: #f9f9f9;
+  height: 5.5%;
+  width: 50%;
+  top: 57.25%;
+  left: 47.5%;
+}
 
 /* condiments */
 .condiments-pic {
@@ -1392,7 +1695,7 @@ clip-path: polygon(40% 0, 60% 0, 65% 35%, 80% 75%, 100% 100%, 0 100%, 20% 75%, 3
   height: 20%;
   width: 20%;
   top: 60%;
-  left: 44%;
+  left: 43.5%;
   z-index: 5;
 }
 

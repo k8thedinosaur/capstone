@@ -38,17 +38,21 @@ to do:
 find new font
 ~make small modals taller (match height of large)~
 ~style add item~
-style scrollbars, x's, buttons
-tossed category text bold
-change date display format
+~style scrollbars, x's, buttons~
+~tossed category text bold~
+~cursor change on clickable things~
+~add clear all button to tossed list~
 
-draw inside of fridge door
+~draw inside of fridge door~
 
 make all the dumb little pictures \0/ /0\
 
 
 
 bonus:
-make icons move on hover
+~make icons move on hover~
+change date display format
 style forms
-draw something behind shopping list
+	get calendar to appear next to date inputs
+draw "easter egg" behind shopping list
+draw something coming out of the shopping bag
